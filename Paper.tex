@@ -4,7 +4,7 @@
 % --------------------------------------------------------------------------
 \documentclass{article}
 \usepackage{spconf,amsmath,graphicx}
-
+\usepackage{amsfonts}
 % Example definitions.
 % --------------------
 \def\x{{\mathbf x}}
@@ -79,11 +79,108 @@ Talk about related work.
 Recent work in deep learning for segmentation, histopathology analysis helped by images. Maybe not too much as the paper is small..
 \section{DataSet}
 \label{sec:dataset}
-Creating of the data set, some features about it. ITK-snap, some statistics about it.
+
+%% Contribution as a dataset, small introduction
+One of the main contributions of this paper is the now public available 
+nuclei detection dataset within HE stainned histopathology images which 
+can be found at www.cbio.ensmp.fr:/pnaylor/download/dataset.zip (not 
+a true address). This annotated dataset provides images clustered by 
+patients. Each patient has at least 3 annotated $512 \times 512$ HE 
+stainned histopathology images with their associated ground truth. Each 
+ground truth image is a $512 \times 512$ where each pixel value above 
+$0$ is considered as a pixel belonging to a nuclei. The differences in 
+values of these pixels denote different nucleus, such an annotation can 
+be used in several processing step which does or doesn't take into 
+account clutered nuclei. See figure \ref{fig:annotation} for an example of 
+three annotated images. This annotation was conducted via the help of 
+the software ITK-snap and were annotated by the authors of the paper.
+
+
+%% Data set creation procedure
+These patients were randomly picked from an unpublished study on
+tripple negative breast cancer. For each of these patients we had access
+to their biopsy sample as a whole slide image (WSI). WSI enables a
+medical practitionner to digitize the huge amount of information that
+can be found in glass slides. WSI can be up to 60 GB big
+uncompressed and can't be stored in RAM on a standard computer. Given
+the WSI of a patient, we randomly cropped $512 \times 512$ samples 
+from the WSI. %% explain that we choose the tissue area? 
+3 to 7 images were choosen from the randomly sampled images to try and give the most diversed dataset among these patients. Once the samples were choosen, we fully annotated each nuclei via the software ITK-snap and touching nuclei are differentiate via a different annotation value.
+
+%%Data set description 
+We can describe the dataset provided.
+
+
 \section{Methodology}
 \label{sec:method}
-About different architectures described. Validation scheme.
+%% Segmentation task
+Let A be the space of RGB images, A can typically be 
+$\mathbb{R}^{n \times p \times 3}$ and let B the space B the space of annotation 
+images, in our case $\{0,1\}^{n \times p}$. We have a set of 
+$(A_l,B_l)_{l \in [1, N]}$ for a supervised learning approach. Our goal is 
+a prediction task 
+named as semantic segmentation, we wish to maximize the prediction of 
+an unseen element belonging to B given an new element in A. We maximize 
+thus prediction by modelizing our prediction function as the softmax output of a deep neural 
+network. We find the model parameters by minimizing a log loss function 
+defined as:
+ $\frac{1}{\sum_{i,j}w_{ij}} \sum_{i,j} \sum_k w_{i,j} t_{i,j,k} \log (\widehat{p_{i,j,k}})$
+, where $k$ designates a certain label, $w_{i,j}$ is 
+certain weight given to pixel $i,j$, $t_{i,j,k}$ is equal to 1 if pixel $i,j$ is 
+of class $k$ and $\widehat{p_{i,j,k}}$ designates the estimated probability 
+of pixel $i,j$ of being $k$ via the softmax output of the neural network.
+We minimize the loss function via stochastic gradient descent.
 
+%% Validation scheme
+We have our training set $(A_l,B_l)_{l \in [1, N]}$ where N is equal to 
+34, how ever each element $A_l$ belongs to a certain patients and 
+several elements $A_l$ can belong to the same patient. As we are 
+dealing with histopathology images, it is know that samples can widely 
+vary from one patient to the other. We thus validate our model by a 
+leave one patient out scheme. Our validation scheme is as followed, for a 
+given set of hype parameters, we 
+train our model on every patient except one that is used for validation. 
+Our final score is averaged over all patients.
+Several metrics assess the quality of the model, the accuracy (Acc), the 
+F1 score and a performance (Perf) score which is the mean between the 
+true positive rates and the true negative rates.
+
+%% Data augmentation and Hyper parameter training: Training scheme
+%% Check number of images and number of transformations
+To train our models, as the number of available annotated is scarse, we 
+used a great number of transformation for the data augmentation. From 
+a original size of 33 annotated images, adding flips, rotations, bluriness 
+and random elastic deformations enabled us to have more then 
+$400 000$ training images per patient. 
+We also try out several hyperparameter configurations: the learning rate and 
+momentum for the stochastic gradient descent, the weight decay value.  
+In practice, we found that hyperparameters tuning didn't influence the 
+scores much, the exepction being the learning rate. If the learning rate 
+was not of the right magnitude the given network did not seem to learn. 
+We also experienced with different 
+initialization value and if possible, we also considered pretrained layers. 
+Using pretrained layers made learning more efficient and made score 
+values more robust.
+
+\section{Different architectures/Results}
+\label{sec:method}
+We experience with 4 know arhitectures in semantic segmentation, one 
+will be named BaochuanNet, Fully Convolutionnal Net (FCN), DeconvNet, 
+UNet. The most basic architecture, BaochuanNet, consists of 4 
+convolutionnal layer where each convolutionnal layer has 8 feature map. 
+This net, being not deep, has the advantage of being less 
+computationnally intensive. FCN is a first attempt of applying "deep 
+feature" representations to the task of semantic segmentation. This 
+archicture has the advantage of re-using a classical deep learning 
+architecture with added on upsampling layer and skip layers. The 
+upsampling layers enable the network to learn a pixel level classification 
+and the skip layers enable the network to fuse different levels of 
+abstraction to the final prediction. This model can be fine tuned with a 
+set of pretrained-weights extracted from the classical deep learning 
+architecture. DeconvNet is also based on a classical architecture, 
+however, in this network their are no skip layer as one intends to learn 
+the proper upsampling threw repeated deconvolution and convolution 
+layers. This model can also be fine tuned.
 \section{Result}
 \label{sec:result}
 table of values
@@ -195,27 +292,57 @@ this \cite{Lamp86}.
 
 \begin{minipage}[b]{1.0\linewidth}
   \centering
-  \centerline{\includegraphics[width=8.5cm]{image1}}
+  \centerline{\includegraphics[width=8.5cm]{RGB_1}}
 %  \vspace{2.0cm}
-  \centerline{(a) Result 1}\medskip
+  \centerline{Patient 498959}\medskip
 \end{minipage}
 %
 \begin{minipage}[b]{.48\linewidth}
   \centering
-  \centerline{\includegraphics[width=4.0cm]{image2}}
+  \centerline{\includegraphics[width=4.0cm]{RGB_1}}
 %  \vspace{1.5cm}
-  \centerline{(b) Results 3}\medskip
+  \centerline{Sample from patient 498959}\medskip
 \end{minipage}
 \hfill
 \begin{minipage}[b]{0.48\linewidth}
   \centering
-  \centerline{\includegraphics[width=4.0cm]{image3}}
+  \centerline{\includegraphics[width=4.0cm]{GT_1}}
 %  \vspace{1.5cm}
-  \centerline{(c) Result 4}\medskip
+  \centerline{Associated ground truth}\medskip
 \end{minipage}
 %
-\caption{Example of placing a figure with experimental results.}
-\label{fig:res}
+%
+\begin{minipage}[b]{.48\linewidth}
+  \centering
+  \centerline{\includegraphics[width=4.0cm]{RGB_2}}
+%  \vspace{1.5cm}
+  \centerline{Sample from patient 581910}\medskip
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.48\linewidth}
+  \centering
+  \centerline{\includegraphics[width=4.0cm]{GT_2}}
+%  \vspace{1.5cm}
+  \centerline{Associated ground truth}\medskip
+\end{minipage}
+%
+%
+\begin{minipage}[b]{.48\linewidth}
+  \centering
+  \centerline{\includegraphics[width=4.0cm]{RGB_3}}
+%  \vspace{1.5cm}
+  \centerline{Sample from patient 581910}\medskip
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.48\linewidth}
+  \centering
+  \centerline{\includegraphics[width=4.0cm]{GT_3}}
+%  \vspace{1.5cm}
+  \centerline{Associated ground truth}\medskip
+\end{minipage}
+%
+\caption{Random annotated samples from the dataset}
+\label{fig:annotation}
 %
 \end{figure}
 
