@@ -7,6 +7,7 @@
 \usepackage{amsfonts}
 \usepackage[utf8]{inputenc}
 \usepackage[francais]{babel}
+\usepackage{hyperref}
 
 % Example definitions.
 % --------------------
@@ -121,40 +122,29 @@ In this latter case, one of the essential steps is to
 segment nuclei from tissue images in order to be able to
 assign them a cell type or phenotypic label and to evaluate their
 spatial distribution. We concentrate on nuclei, as they are indicative
-of many cellular phenotypes\citep{Chow2012}, and their morphology is 
+of many cellular phenotypes\cite{Chow2012}, and their morphology is 
 currently used by pathologists in order to
-identify the mitotic index and the level of nuclear pleomorphism
-
-Regarding cellular phenotyping, we will focus on nuclear morphologies,
-because (1) nuclei are indicative of many cellular phenotypes20, (2)
-their morphology is currently used by pathologists in order to
-identify the mitotic index and the level of nuclear pleomorphism12 and
-(3) their segmentation is feasible5 in contrast to many other cellular
-structures, such as the plasma membrane for instance.  
-
-
+identify the mitotic index and the level of nuclear
+pleomorphism\cite{Elston1991}. 
 
 Yet, segmentation of nuclei is a
 complicated task: tissue type, staining differences and cell type
 convey them different visual characteristics, which makes it very difficult to
 design traditional image segmentation algorithms that work
 satisfactorily for all of these different cases. On the other hand,
-deep learning algorithms have been recently used 
+deep learning algorithms have been used recently with great success to
+complex segmentation tasks in biology\cite{Ciresan2012,Ronneberger2015}. 
 
-
-
-% motivation of the deep learning approach (for instance by taking
-% fewer samples). t
-
-
-of bioinformatics programs aiming at 
-
-related to cancer and they
-have revolutionized our understanding of the molecular basis of cancer
-and led to the definition of clinically relevant subtypes, bearing
-high potential for the development of new cancer therapies.  
-
-
+The contribution of this paper is three-fold: (1) we have generated a
+ground truth of annotated images containing segmentation results for
+more than 2000 cells. The dataset can be used by the scientific
+community. (2) We apply a deep neural network end-to-end strategy and
+demonstrate the superiority of this approach with respect to
+previously proposed simpler architectures. (3) We propose a
+post-processing strategy of the posterior probabilities provided by
+the network. This post-processing strategy is based on mathematical
+morphology and has a rigorous interpretation as to when objects are to
+be split. 
 
 \section{Related work}
 \label{sec:related}
@@ -466,6 +456,6 @@ List and number all bibliographical references at the end of the paper.  The ref
 % style file from IEEE produces unsorted bibliography list.
 % -------------------------------------------------------------------------
 \bibliographystyle{IEEEbib}
-\bibliography{strings,refs}
+\bibliography{strings}
 
 \end{document}
