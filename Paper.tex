@@ -74,17 +74,42 @@ related information for producing your proceedings manuscripts.
 
 \section{Related work}
 \label{sec:related}
-
+Image segmentation and object recognition in medical imagining have 
+been tackled for many years and many approaches have been found. 
+Methods based on mathematical morphological operators have been 
+widely used and applied for segmentation and feature extraction, 
+however such methods rely on the user to manually define the 
+information that is relevant for his task \cite{irshad2014methods}. 
+Segmentation methods based on a strong priori information are also 
+possible and yield comparable results in terms of accuracy, in 
+\cite{ranefall2016fast} they segment the picture using a ellispe fit 
+which is considerably faster than other state of the art methods. Graph-
+based tools for segmentation are also possible in histopathology 
+\cite{ta2009graph}. \cite{manivannanlocal} focus on gland 
+segmentation, they achieve good results by predicting image patches as 
+a whole, via a classification scheme. The output confidence vector is 
+then preprocessed to obtain the final segmentation. Alternative methods 
+have arisen from the achieving Convolutional neural networks 
+\cite{lecun}, in particular strong incentive rose with the very impressive 
+results that they achieved in the pascal voc challenge with 
+\cite{ImageNet}. Recent advances in deep neural network, and in 
+particular in their optimization have made them become the state-of-the-
+art model for object recognition.  Deep neural network have also been 
+used for different task and have yielded very impressiv results, we can think of 
+semantic segmentation problems, where \cite{long2015fcn} use "de-
+convolution layers" and up-sampling in order to identify and precisely 
+locate objects within a picture. Different architecture arising from 
+different intuition are also possible and have been applied in this paper
 Talk about related work.
-Recent work in deep learning for segmentation, histopathology analysis helped by images. Maybe not too much as the paper is small..
+
 \section{DataSet}
 \label{sec:dataset}
 
 %% Contribution as a dataset, small introduction
 One of the main contributions of this paper is the now public available 
 nuclei detection dataset within HE stainned histopathology images which 
-can be found at www.cbio.ensmp.fr:/pnaylor/download/dataset.zip (not 
-a true address). This annotated dataset provides images clustered by 
+can be found at website %\url{www.cbio.ensmp.fr:/pnaylor/download/dataset.zip} 
+(not a true address). This annotated dataset provides images clustered by 
 patients. Each patient has at least 3 annotated $512 \times 512$ HE 
 stainned histopathology images with their associated ground truth. Each 
 ground truth image is a $512 \times 512$ where each pixel value above 
@@ -108,8 +133,19 @@ from the WSI. %% explain that we choose the tissue area?
 3 to 7 images were choosen from the randomly sampled images to try and give the most diversed dataset among these patients. Once the samples were choosen, we fully annotated each nuclei via the software ITK-snap and touching nuclei are differentiate via a different annotation value.
 
 %%Data set description 
-We can describe the dataset provided.
+In this data set we have annotated a considerous amount of cells, 
+including normal breast cells (epithelial and lobule cells),  cancerous 
+breast cells, fibroblasts,  endothelial cells, fat cells, macrophage cells and 
+inflammatory cells (lymphocytes and plasmocytes). For the moment, cell types have not been seperated, which means that in this dataset every annotation corresponds to a global type of cell. 
 
+\begin{itemize}
+\item Number of images: 33 \\
+\item Number  of cells: 2754 \\
+\item Maximum number of cells in one sample: 293 \\
+\item Minimum number of cells in one sample: 5 \\
+\item Mean number of cells: 83 \\
+\item Standard deviation of number of cells: 63 \\
+\end{itemize}
 
 \section{Methodology}
 \label{sec:method}
@@ -151,7 +187,7 @@ To train our models, as the number of available annotated is scarse, we
 used a great number of transformation for the data augmentation. From 
 a original size of 33 annotated images, adding flips, rotations, bluriness 
 and random elastic deformations enabled us to have more then 
-$400 000$ training images per patient. 
+$400 000$ training images. 
 We also try out several hyperparameter configurations: the learning rate and 
 momentum for the stochastic gradient descent, the weight decay value.  
 In practice, we found that hyperparameters tuning didn't influence the 
@@ -164,7 +200,7 @@ values more robust.
 
 \section{Different architectures/Results}
 \label{sec:method}
-We experience with 4 know arhitectures in semantic segmentation, one 
+We experience with 4 known arhitectures in semantic segmentation, one 
 will be named BaochuanNet, Fully Convolutionnal Net (FCN), DeconvNet, 
 UNet. The most basic architecture, BaochuanNet, consists of 4 
 convolutionnal layer where each convolutionnal layer has 8 feature map. 
@@ -180,10 +216,25 @@ set of pretrained-weights extracted from the classical deep learning
 architecture. DeconvNet is also based on a classical architecture, 
 however, in this network their are no skip layer as one intends to learn 
 the proper upsampling threw repeated deconvolution and convolution 
-layers. This model can also be fine tuned.
+layers. This model can also be fine tuned. The final architecture that we tried is the UNet. This network combines both contribution of the above networks, the UNet has a similar architecture to the DeconvNet with skip layers.
 \section{Result}
 \label{sec:result}
-table of values
+
+\begin{tabular}{|c|c|c|c|c|c|}
+ & UNet & Baochuan & DeconvNet & FCN & Ensemble \\
+%\hrule
+Accuracy          &       0.89 &       0.94 & 0.97\\
+IU   &       0.70 &       0.76 &     0.86 \\
+Recall                     &       0.75 &       0.74  &     0.86 &&\\
+Precision                  &       0.64 &       0.74 &     0.86 &&\\
+F1                         &       0.69 &       0.74 &     0.86 &&  \\
+TP             &       0.75 &       0.74 &     0.86 && \\
+TN             &       0.92 &       0.96 &     0.98 &&\\
+Performance                &       0.84 &       0.85 &     0.92 &&\\
+Pixel error                &       0.11 &       0.06 &     0.03 &&\\
+\end{tabular}
+
+
 \section{Discussion}
 \label{sec:discussion}
 What's next?
