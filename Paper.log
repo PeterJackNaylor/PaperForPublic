@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.6.16)  7 NOV 2016 19:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.6.16)  7 NOV 2016 20:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -709,11 +709,7 @@ Underfull \hbox (badness 1412) in paragraph at lines 195--208
 ksnap . org$[]\OT1/ptm/m/n/10 ,
  []
 
-[2]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-<RGB_1.png, id=99, 196.48407pt x 196.48407pt>
+[2] <RGB_1.png, id=99, 196.48407pt x 196.48407pt>
 File: RGB_1.png Graphic file (type png)
  <use RGB_1.png>
 Package pdftex.def Info: RGB_1.png used on input line 533.
@@ -869,7 +865,7 @@ xmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2016/texmf-dist
 e1/urw/times/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/ti
 mes/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8
 a.pfb>
-Output written on Paper.pdf (5 pages, 1120457 bytes).
+Output written on Paper.pdf (5 pages, 1099058 bytes).
 PDF statistics:
  215 PDF objects out of 1000 (max. 8388607)
  160 compressed objects within 2 object streams

@@ -150,8 +150,8 @@ be split.
 \section{Related work}
 \label{sec:related}
 
-In \cite{Drelie08-298}, they have a partially annotated data set of 
-histopathology images for nuclei segmentation. 
+\noindent In \cite{Drelie08-298}, they have a partially annotated data set for segmentation of 
+histopathology images for nuclei segmentation.   However their study does not sollely focus on tripple negativ breast cancer patients and not only segmentation.
 
 %% fill in more information about that dataset
 
@@ -192,7 +192,7 @@ different intuition are also possible and have been applied in this paper.
 \label{sec:dataset}
 
 %% Contribution as a dataset, small introduction
-One of the main contributions of this paper is the now public available 
+\noindent One of the main contributions of this paper is the now public available 
 nuclei detection dataset within HE stainned histopathology images which 
 can be found at website \url{http://cbio.mines-paristech.fr/~pnaylor/Downloads/HECellSegmentation.zip} 
 (not a true address). This annotated dataset provides images clustered by 
@@ -239,7 +239,7 @@ types have not been included, which means that in this dataset every annotation 
 \section{Methodology}
 \label{sec:method}
 %% Segmentation task
-Let A be the space of RGB images, A can typically be 
+\noindent Let A be the space of RGB images, A can typically be 
 $\mathbb{R}^{n \times p \times 3}$ and let B the space B the space of annotation 
 images, in our case $\{0,1\}^{n \times p}$. We have a set of 
 $(A_l,B_l)_{l \in [1, N]}$ for a supervised learning approach. Our goal is 
@@ -364,7 +364,7 @@ ensemble classifier as suggested in
 %architecture to the DeconvNet with skip layers.
 \section{Result and discussion}
 \label{sec:result}
-We conducted our experiments on GPUs via the caffe framework, 
+\noindent We conducted our experiments on GPUs via the caffe framework, 
 \cite{jia2014caffe}. We present our results in table \ref{tab:res} where 
 we averaged the metrics other all left out patients. We also added, for 
 illustration purposes \ref{fig:prediction}, image predictions and 
