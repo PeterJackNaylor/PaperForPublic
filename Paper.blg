@@ -2,48 +2,49 @@ This is BibTeX, Version 0.99d (TeX Live 2016)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Paper.aux
 The style file: IEEEbib.bst
-Database file #1: strings.bib
-Warning--I didn't find a database entry for "manivannanlocal"
-Warning--I didn't find a database entry for "C2"
-You've used 12 entries,
+Database file #1: refs.bib
+Warning--I didn't find a database entry for "Ciresan2012"
+Warning--I didn't find a database entry for "Grimaud1992"
+Warning--I didn't find a database entry for "scikit-image"
+You've used 14 entries,
             1838 wiz_defined-function locations,
-            536 strings with 6025 characters,
-and the built_in function-call counts, 3526 in all, are:
-= -- 311
-> -- 165
+            550 strings with 6714 characters,
+and the built_in function-call counts, 4024 in all, are:
+= -- 349
+> -- 214
 < -- 4
-+ -- 59
-- -- 47
-* -- 277
-:= -- 528
-add.period$ -- 12
-call.type$ -- 12
-change.case$ -- 12
++ -- 76
+- -- 62
+* -- 332
+:= -- 625
+add.period$ -- 16
+call.type$ -- 14
+change.case$ -- 14
 chr.to.int$ -- 0
-cite$ -- 12
-duplicate$ -- 156
-empty$ -- 333
-format.name$ -- 47
-if$ -- 803
+cite$ -- 14
+duplicate$ -- 171
+empty$ -- 372
+format.name$ -- 62
+if$ -- 901
 int.to.chr$ -- 0
-int.to.str$ -- 12
-missing$ -- 12
-newline$ -- 63
-num.names$ -- 12
-pop$ -- 40
+int.to.str$ -- 14
+missing$ -- 14
+newline$ -- 73
+num.names$ -- 14
+pop$ -- 48
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 90
+skip$ -- 80
 stack$ -- 0
-substring$ -- 278
-swap$ -- 59
+substring$ -- 287
+swap$ -- 55
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 32
-width$ -- 14
-write$ -- 131
-(There were 2 warnings)
+while$ -- 38
+width$ -- 16
+write$ -- 154
+(There were 3 warnings)

@@ -190,13 +190,13 @@ can be found at website %\url{www.cbio.ensmp.fr:/pnaylor/download/dataset.zip}
 (not a true address). This annotated dataset provides images clustered by 
 patients. Each patient has at least 3 annotated $512 \times 512$ HE 
 stainned histopathology images with their associated ground truth. Each 
-ground truth image is a $512 \times 512$ where each pixel value above 
+ground truth image is a $512 \times 512$ image where each pixel value above 
 $0$ is considered as a pixel belonging to a nuclei. The differences in 
 values of these pixels denote different nucleus, such an annotation can 
 be used in several processing step which does or doesn't take into 
 account clutered nuclei. See figure \ref{fig:annotation} for an example of 
 three annotated images. This annotation was conducted via the help of 
-the software ITK-snap and were annotated by the authors of the paper.
+the software ITK-snap, \cite{py06nimg} http://www.itksnap.org, and were annotated by the authors of the paper.
 
 
 %% Data set creation procedure
@@ -214,7 +214,7 @@ from the WSI. %% explain that we choose the tissue area?
 In this data set we have annotated a considerous amount of cells, 
 including normal breast cells (epithelial and lobule cells),  cancerous 
 breast cells, fibroblasts,  endothelial cells, fat cells, macrophage cells and 
-inflammatory cells (lymphocytes and plasmocytes). For the moment, cell types have not been seperated, which means that in this dataset every annotation corresponds to a global type of cell. 
+inflammatory cells (lymphocytes and plasmocytes). For the moment, cell types have not been seperated, which means that in this dataset every annotation corresponds to a global type: cell. 
 
 \begin{itemize}
 \item Number of images: 33 \\
@@ -239,7 +239,7 @@ thus prediction by modelizing our prediction function as the softmax output of a
 network. We find the model parameters by minimizing a log loss function 
 defined as:
  $\frac{1}{\sum_{i,j}w_{ij}} \sum_{i,j} \sum_k w_{i,j} t_{i,j,k} \log (\widehat{p_{i,j,k}})$
-, where $k$ designates a certain label, $w_{i,j}$ is 
+, where $k$ designates a certain label, $w_{i,j}$ is a 
 certain weight given to pixel $i,j$, $t_{i,j,k}$ is equal to 1 if pixel $i,j$ is 
 of class $k$ and $\widehat{p_{i,j,k}}$ designates the estimated probability 
 of pixel $i,j$ of being $k$ via the softmax output of the neural network.
@@ -247,7 +247,7 @@ We minimize the loss function via stochastic gradient descent.
 
 %% Validation scheme
 We have our training set $(A_l,B_l)_{l \in [1, N]}$ where N is equal to 
-34, how ever each element $A_l$ belongs to a certain patients and 
+33, how ever each element $A_l$ belongs to a certain patients and 
 several elements $A_l$ can belong to the same patient. As we are 
 dealing with histopathology images, it is know that samples can widely 
 vary from one patient to the other. We thus validate our model by a 
@@ -255,9 +255,9 @@ leave one patient out scheme. Our validation scheme is as followed, for a
 given set of hype parameters, we 
 train our model on every patient except one that is used for validation. 
 Our final score is averaged over all patients.
-Several metrics assess the quality of the model, the accuracy (Acc), the 
-F1 score and a performance (Perf) score which is the mean between the 
-true positive rates and the true negative rates.
+Several metrics assess the quality of the model, the accuracy, the 
+F1 score and a performance score which is the mean between the 
+true positive rate and the true negative rate.
 
 %% Data augmentation and Hyper parameter training: Training scheme
 %% Check number of images and number of transformations
@@ -292,8 +292,8 @@ the putative center of the nucleus, but may still be larger than
 typically applied thresholds.This leads to the following rationale. As in the center of nuclei, the
 posterior probability is maximal, we can readily assume that the local
 maxima of the posterior correspond to putative nuclei, which we call candidates. Let
-$\mathcal{X}=(x_1,x_2,\ldots,x_N)$be a path that joins two candidates
-(i.e. $\forall i x_i$ and $x_{i+1}$ are neighbor pixels) and
+$\mathcal{X}=(x_1,x_2,\ldots,x_N)$ be a path that joins two candidates
+(i.e. $\forall i, \ x_i$ and $x_{i+1}$ are neighbor pixels) and
 $\mathcal{P}=(p_1,p_2,\ldots,p_N)$ the corresponding posterior
 probabilities. Without loss of generality, we assume $p_1\leq P_N$.
 We define for each path $\mathcal{X}$ a cost
@@ -330,10 +330,8 @@ all the steps which were not related to deep learning.
 
 \section{Different architectures/Results}
 \label{sec:results}
-We experience with 4 known arhitectures in semantic segmentation, one 
-will be named BaochuanNet, Fully Convolutionnal Net (FCN), DeconvNet, 
-UNet. The most basic architecture, BaochuanNet, consists of 4 
-convolutionnal layer where each convolutionnal layer has 8 feature map. 
+We experience with 3 known arhitectures in semantic segmentation, named PangNet, Fully Convolutionnal Net (FCN) and DeconvNet. The most basic architecture, PangNet, consists of 4 
+convolutionnal layer where each convolutionnal layer has 8 feature map, for more information please refer to \cite{pang2010cell}. 
 This net, being not deep, has the advantage of being less 
 computationnally intensive. FCN is a first attempt of applying "deep 
 feature" representations to the task of semantic segmentation. This 
@@ -349,17 +347,17 @@ the proper upsampling threw repeated deconvolution and convolution
 layers. This model can also be fine tuned, for more information please 
 refer to the original paper \cite{noh2015learning}. We did not
 ensemble classifier as suggested in 
-\cite{noh2015learning} as our FCN and DeconvNet classifier achieve very similar scores.
+\cite{noh2015learning} as our FCN and DeconvNet classifier achieve very similar scores on the test sets.
 % The final architecture that we tried is the UNet. This network combines 
 %both contribution of the above networks, the UNet has a similar 
 %architecture to the DeconvNet with skip layers.
 \section{Result and discussion}
 \label{sec:result}
-We conducted our experiments on GPUs via the caffe framework, \cite{jia2014caffe}. We present our results in table \ref{tab:res} where we averaged the metrics other all left out patients. We also added, for illustration purposes \ref{fig:prediction}, image prediction and associated probability maps to evaluate some differences between the classifiers. We notice that the simpler net, Baochuan Net seems to have learnt simple rules based on color information. As we can not notice by the "holes" in the probability map when the interior of the cell is brighter. On the contrary, deeper nets as FCN and DeconvNet have learnt deeper features and seem capable of recognizing whole cells. The small noticable differences in \ref{fig:prediction} are due to a random crop, this results in a slightly shiffted image for each one of the predictions.
+We conducted our experiments on GPUs via the caffe framework, \cite{jia2014caffe}. We present our results in table \ref{tab:res} where we averaged the metrics other all left out patients. We also added, for illustration purposes \ref{fig:prediction}, image prediction and associated probability maps to evaluate some differences between the classifiers. We notice that the simpler net, PangNet seems to have learnt simple rules such as color information. As we can not notice by the "holes" in the probability map when the interior of the cell is brighter. On the contrary, deeper nets as FCN and DeconvNet have learnt deeper features and seem capable of recognizing whole cells. .
 \begin{table}
 \begin{tabular}{|c|c|c|c|}
 \hline
-  & Baochuan & DeconvNet & FCN \\
+  & PangNet & DeconvNet & FCN \\
  \hline
 Accuracy  &       0.936 & 0.968 &0.958  \\
 IU   &    0.759 &     0.856 & 0.857 \\
@@ -372,13 +370,13 @@ Performance    &       0.853 &     0.918 & 0.916\\
 Pixel error  &  0.063 &     0.032 & 0.042\\
 \hline
 \end{tabular}
-\caption{\label{tab:res}Results}
+\caption{Results}
 \label{tab:res}
 \end{table}
 
 %%with Unet
 %\begin{tabular}{|c|c|c|c|c|c|}
-% & UNet & Baochuan & DeconvNet & FCN & Ensemble \\
+% & UNet & PangNet & DeconvNet & FCN & Ensemble \\
 %\hrule
 %Accuracy &       0.89 &       0.936 & 0.968 &0.958 & \\
 %IU   &       0.70 &       0.759 &     0.856 & 0.857 &\\
@@ -563,7 +561,7 @@ Pixel error  &  0.063 &     0.032 & 0.042\\
   \centering
   \centerline{\includegraphics[height=4.0cm]{BaochuanB}}
 %  \vspace{1.5cm}
-  \centerline{BaochuanNet}\medskip
+  \centerline{PangNet}\medskip
 \end{minipage}
 \hfill
 \begin{minipage}[b]{.48\linewidth}
