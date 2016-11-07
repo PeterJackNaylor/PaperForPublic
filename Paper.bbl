@@ -1,51 +1,27 @@
 \begin{thebibliography}{1}
 
-\bibitem{irshad2014methods}
-Humayun Irshad, Antoine Veillard, Ludovic Roux, and Daniel Racoceanu,
-\newblock ``Methods for nuclei detection, segmentation, and classification in
-  digital histopathology: A review—current status and future potential,''
-\newblock {\em Biomedical Engineering, IEEE Reviews in}, vol. 7, pp. 97--114,
-  2014.
+\bibitem{Chow2012}
+K.H. Chow, Factor R.E., and Ullman K.S.,
+\newblock ``The nuclear envelope environment and its cancer connections,''
+\newblock {\em Nature Reviews on Cancer}, vol. 12, pp. 196--209, March 2012.
 
-\bibitem{ranefall2016fast}
-Petter Ranefall, Sajith~Kecheril Sadanandan, and Carolina W{\"a}hlby,
-\newblock ``Fast adaptive local thresholding based on ellipse fit,''
-\newblock in {\em International Symposium on Biomedical Imaging (ISBI'16),
-  Prague, Czech Republic, April 13-16, 2016}, 2016.
+\bibitem{Elston1991}
+C.~W. Elston and O.~Ellis,
+\newblock ``Pathological prognostic factors in breast cancer,''
+\newblock {\em Histopathology}, vol. 19, pp. 403–410, 1991.
 
-\bibitem{ta2009graph}
-Vinh-Thong Ta, Olivier L{\'e}zoray, Abderrahim Elmoataz, and Sophie Sch{\"u}pp,
-\newblock ``Graph-based tools for microscopic cellular image segmentation,''
-\newblock {\em Pattern Recognition}, vol. 42, no. 6, pp. 1113--1125, 2009.
+\bibitem{Ciresan2012}
+Dan~Claudiu Ciresan, Alessandro Giusti, Luca~Maria Gambardella, and J{\"u}rgen
+  Schmidhuber,
+\newblock ``Deep neural networks segment neuronal membranes in electron
+  microscopy images,''
+\newblock in {\em NIPS}, 2012, pp. 2852--2860.
 
-\bibitem{manivannanlocal}
-Siyamalan Manivannan, Wenqi Li, Shazia Akbar, Jianguo Zhang, Emanuele Trucco,
-  and Stephen~J McKenna,
-\newblock ``Local structure prediction for gland segmentation,''
-\newblock in {\em International Symposium on Biomedical Imaging (ISBI'16),
-  Prague, Czech Republic, April 13-16, 2016}, 2016.
-
-\bibitem{lecun}
-Yann LeCun, Bernhard Boser, John~S Denker, Donnie Henderson, Richard~E Howard,
-  Wayne Hubbard, and Lawrence~D Jackel,
-\newblock ``Backpropagation applied to handwritten zip code recognition,''
-\newblock {\em Neural computation}, vol. 1, no. 4, pp. 541--551, 1989.
-
-\bibitem{ImageNet}
-Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton,
-\newblock ``Imagenet classification with deep convolutional neural networks,''
-\newblock in {\em Advances in neural information processing systems}, 2012, pp.
-  1097--1105.
-
-\bibitem{long2015fcn}
-Jonathan Long, Evan Shelhamer, and Trevor Darrell,
-\newblock ``Fully convolutional networks for semantic segmentation,''
-\newblock in {\em Proceedings of the IEEE Conference on Computer Vision and
-  Pattern Recognition}, 2015, pp. 3431--3440.
-
-\bibitem{Lamp86}
-A.B. Smith, C.D. Jones, and E.F. Roberts,
-\newblock ``Article title,''
-\newblock {\em Journal}, vol. 62, pp. 291--294, January 1920.
+\bibitem{Ronneberger2015}
+Olaf Ronneberger, Philipp Fischer, and Thomas Brox,
+\newblock ``{U-Net: Convolutional Networks for Biomedical Image
+  Segmentation},''
+\newblock in {\em Medical Image Computing and Computer-Assisted Intervention
+  (MICCAI)}, 2015, pp. 234--241.
 
 \end{thebibliography}

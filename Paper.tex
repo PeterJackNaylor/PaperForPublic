@@ -173,7 +173,10 @@ used for different task and have yielded very impressiv results, we can think of
 semantic segmentation problems, where \cite{long2015fcn} use "de-
 convolution layers" and up-sampling in order to identify and precisely 
 locate objects within a picture. Different architecture arising from 
-different intuition are also possible and have been applied in this paper
+different intuition are also possible and have been applied in this paper.
+
+
+
 Talk about related work.
 
 \section{DataSet}
@@ -267,6 +270,9 @@ momentum for the stochastic gradient descent, the weight decay value.
 In practice, we found that hyperparameters tuning didn't influence the 
 scores much, the exepction being the learning rate. If the learning rate 
 was not of the right magnitude the given network did not seem to learn. 
+We therefore fixed the momentum to be 0.9 and the weight decay to be 
+$5.10^{-5}$ for all of the experiences, the learning rate was tunned 
+according to the model choosen.
 We also experienced with different 
 initialization value and if possible, we also considered pretrained layers. 
 Using pretrained layers made learning more efficient and made score 
@@ -287,42 +293,56 @@ upsampling layers enable the network to learn a pixel level classification
 and the skip layers enable the network to fuse different levels of 
 abstraction to the final prediction. This model can be fine tuned with a 
 set of pretrained-weights extracted from the classical deep learning 
-architecture. DeconvNet is also based on a classical architecture, 
+architecture, for a more detailed explaination please refer to \cite{long2015fcn}. DeconvNet is also based on a classical architecture, 
 however, in this network their are no skip layer as one intends to learn 
 the proper upsampling threw repeated deconvolution and convolution 
-layers. This model can also be fine tuned. The final architecture that we tried is the UNet. This network combines both contribution of the above networks, the UNet has a similar architecture to the DeconvNet with skip layers.
-\section{Result}
+layers. This model can also be fine tuned, for more information please 
+refer to the original paper \cite{noh2015learning}. We did not
+ensemble classifier as suggested in 
+\cite{noh2015learning} as our FCN and DeconvNet classifier achieve very similar scores.
+% The final architecture that we tried is the UNet. This network combines 
+%both contribution of the above networks, the UNet has a similar 
+%architecture to the DeconvNet with skip layers.
+\section{Result and discussion}
 \label{sec:result}
-
-\begin{tabular}{|c|c|c|c|c|c|}
- & UNet & Baochuan & DeconvNet & FCN & Ensemble \\
-%\hrule
-Accuracy          &       0.89 &       0.94 & 0.97\\
-IU   &       0.70 &       0.76 &     0.86 \\
-Recall                     &       0.75 &       0.74  &     0.86 &&\\
-Precision                  &       0.64 &       0.74 &     0.86 &&\\
-F1                         &       0.69 &       0.74 &     0.86 &&  \\
-TP             &       0.75 &       0.74 &     0.86 && \\
-TN             &       0.92 &       0.96 &     0.98 &&\\
-Performance                &       0.84 &       0.85 &     0.92 &&\\
-Pixel error                &       0.11 &       0.06 &     0.03 &&\\
+We conducted our experiments on GPUs via the caffe framework, \cite{caffe}. We present our results in table \ref{tab:resul} where we averaged the metrics other all left out patients. We also added, for illustration purposes \ref{fig:prediction}, image prediction and associated probability maps to evaluate some differences between the classifiers. We notice that the simpler net, Baochuan Net seems to have learnt simple rules based on color information. As we can not notice by the "holes" in the probability map when the interior of the cell is brighter. On the contrary, deeper nets as FCN and DeconvNet have learnt deeper features and seem capable of recognizing whole cells. The small noticable differences in \ref{fig:prediction} are due to a random crop, this results in a slightly shiffted image for each one of the predictions.
+\begin{table}
+\begin{tabular}{|c|c|c|c|}
+\hline
+  & Baochuan & DeconvNet & FCN \\
+ \hline
+Accuracy  &       0.936 & 0.968 &0.958  \\
+IU   &    0.759 &     0.856 & 0.857 \\
+Recall     &       0.744  &     0.856 & 0.855 \\
+Precision   &       0.741 &     0.858 & 0.878\\
+F1    &       0.742 &     0.856 & 0.866 \\
+TP       &       0.744 &     0.856 & 0.855  \\
+TN      &       0.963 &     0.981 &  0.977\\
+Performance    &       0.853 &     0.918 & 0.916\\
+Pixel error  &  0.063 &     0.032 & 0.042\\
+\hline
 \end{tabular}
+\caption{\label{tab:res}Results}
+\label{tab:res}
+\end{table}
+
+%%with Unet
+%\begin{tabular}{|c|c|c|c|c|c|}
+% & UNet & Baochuan & DeconvNet & FCN & Ensemble \\
+%\hrule
+%Accuracy &       0.89 &       0.936 & 0.968 &0.958 & \\
+%IU   &       0.70 &       0.759 &     0.856 & 0.857 &\\
+%Recall    &       0.75 &       0.744  &     0.856 & 0.855 &\\
+%Precision    &       0.64 &       0.741 &     0.858 & 0.878&\\
+%F1       &       0.69 &       0.742 &     0.856 & 0.866&  \\
+%TP             &       0.75 &       0.744 &     0.856 & 0.855 & \\
+%TN             &       0.92 &       0.963 &     0.981 &  0.977&\\
+%Performance    &       0.84 &       0.853 &     0.918 & 0.916&\\
+%Pixel error  &       0.11 &       0.063 &     0.032 & 0.042&\\
+%\end{tabular}
 
 
-\section{Discussion}
-\label{sec:discussion}
-What's next?
 
-\section{Formatting your paper}
-\label{sec:format}
-
-All printed material, including text, illustrations, and charts, must be kept
-within a print area of 7 inches (178 mm) wide by 9 inches (229 mm) high. Do
-not write or print anything outside the print area. The top margin must be 1
-inch (25 mm), except for the title page, and the left margin must be 0.75 inch
-(19 mm).  All {\it text} must be in a two-column format. Columns are to be 3.39
-inches (86 mm) wide, with a 0.24 inch (6 mm) space between them. Text must be
-fully justified.
 
 \section{PAGE TITLE SECTION}
 \label{sec:pagestyle}
@@ -336,92 +356,18 @@ affiliations may require two or more lines for this information.
 \section{TYPE-STYLE AND FONTS}
 \label{sec:typestyle}
 
-To achieve the best rendering both in the proceedings and from the CD-ROM, we
-strongly encourage you to use Times-Roman font.  In addition, this will give
-the proceedings a more uniform look.  Use a font that is no smaller than nine
-point type throughout the paper, including figure captions.
-
-In nine point type font, capital letters are 2 mm high.  If you use the
-smallest point size, there should be no more than 3.2 lines/cm (8 lines/inch)
-vertically.  This is a minimum spacing; 2.75 lines/cm (7 lines/inch) will make
-the paper much more readable.  Larger type sizes require correspondingly larger
-vertical spacing.  Please do not double-space your paper.  True-Type 1 fonts
-are preferred.
 
 The first paragraph in each section should not be indented, but all the
 following paragraphs within the section should be indented as these paragraphs
 demonstrate.
 
-\section{MAJOR HEADINGS}
-\label{sec:majhead}
 
-Major headings, for example, "1. Introduction", should appear in all capital
-letters, bold face if possible, centered in the column, with one blank line
-before, and one blank line after. Use a period (".") after the heading number,
-not a colon.
-
-\subsection{Subheadings}
-\label{ssec:subhead}
-
-Subheadings should appear in lower case (initial word capitalized) in
-boldface.  They should start at the left margin on a separate line.
- 
-\subsubsection{Sub-subheadings}
-\label{sssec:subsubhead}
-
-Sub-subheadings, as in this paragraph, are discouraged. However, if you
-must use them, they should appear in lower case (initial word
-capitalized) and start at the left margin on a separate line, with paragraph
-text beginning on the following line.  They should be in italics.
-
-\section{PRINTING YOUR PAPER}
-\label{sec:print}
-
-Print your properly formatted text on high-quality, 8.5 x 11-inch white printer
-paper. A4 paper is also acceptable, but please leave the extra 0.5 inch (12 mm)
-empty at the BOTTOM of the page and follow the top and left margins as
-specified.  If the last page of your paper is only partially filled, arrange
-the columns so that they are evenly balanced if possible, rather than having
-one long column.
-
-In \LaTeX, to start a new column (but not a new page) and help balance the
-last-page column lengths, you can use the command ``$\backslash$pagebreak'' as
-demonstrated on this page (see the \LaTeX\ source below).
-
-\section{PAGE NUMBERING}
-\label{sec:page}
-
-Please do {\bf not} paginate your paper.  Page numbers, session numbers, and
-conference identification will be inserted when the paper is included in the
-proceedings.
-
-\section{ILLUSTRATIONS, GRAPHS, AND PHOTOGRAPHS}
-\label{sec:illust}
-
-Illustrations must appear within the designated margins.  They may span the two
-columns.  If possible, position illustrations at the top of columns, rather
-than in the middle or at the bottom.  Caption and number every illustration.
-All halftone illustrations must be clear black and white prints.  If you use
-color, make sure that the color figures are clear when printed on a black-only
-printer.
-
-Since there are many ways, often incompatible, of including images (e.g., with
-experimental results) in a \LaTeX\ document, below is an example of how to do
-this \cite{Lamp86}.
 
 % Below is an example of how to insert images. Delete the ``\vspace'' line,
 % uncomment the preceding line ``\centerline...'' and replace ``imageX.ps''
 % with a suitable PostScript file name.
 % -------------------------------------------------------------------------
 \begin{figure}[htb]
-
-\begin{minipage}[b]{1.0\linewidth}
-  \centering
-  \centerline{\includegraphics[width=8.5cm]{RGB_1}}
-%  \vspace{2.0cm}
-  \centerline{Patient 498959}\medskip
-\end{minipage}
-%
 \begin{minipage}[b]{.48\linewidth}
   \centering
   \centerline{\includegraphics[width=4.0cm]{RGB_1}}
@@ -456,7 +402,7 @@ this \cite{Lamp86}.
   \centering
   \centerline{\includegraphics[width=4.0cm]{RGB_3}}
 %  \vspace{1.5cm}
-  \centerline{Sample from patient 581910}\medskip
+  \centerline{Another one from patient 581910}\medskip
 \end{minipage}
 \hfill
 \begin{minipage}[b]{0.48\linewidth}
@@ -468,6 +414,74 @@ this \cite{Lamp86}.
 %
 \caption{Random annotated samples from the dataset}
 \label{fig:annotation}
+%
+\end{figure}
+
+
+\begin{figure}[htb]
+\begin{minipage}[b]{.48\linewidth}
+  \centering
+  \centerline{\includegraphics[height=4.0cm]{RGB_pred}}
+%  \vspace{1.5cm}
+  \centerline{Original RGB sample}\medskip
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.48\linewidth}
+  \centering
+  \centerline{\includegraphics[width=4.0cm]{GT_pred}}
+%  \vspace{1.5cm}
+  \centerline{Associated ground truth}\medskip
+\end{minipage}
+
+
+\begin{minipage}[b]{0.48\linewidth}
+  \centering
+  \centerline{\includegraphics[height=4.0cm]{BaochuanB}}
+%  \vspace{1.5cm}
+  \centerline{BaochuanNet}\medskip
+\end{minipage}
+\hfill
+\begin{minipage}[b]{.48\linewidth}
+  \centering
+  \centerline{\includegraphics[height=4.0cm]{BaochuanP}}
+%  \vspace{1.5cm}
+  \centerline{Probability map}\medskip
+\end{minipage}
+
+
+%
+%
+\begin{minipage}[b]{.48\linewidth}
+  \centering
+  \centerline{\includegraphics[height=4.0cm]{DeconvNetB}}
+%  \vspace{1.5cm}
+  \centerline{DeconvNet}\medskip
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.48\linewidth}
+  \centering
+  \centerline{\includegraphics[height=4.0cm]{DeconvNetP}}
+%  \vspace{1.5cm}
+  \centerline{Probability map}\medskip
+\end{minipage}
+%
+%
+\begin{minipage}[b]{.48\linewidth}
+  \centering
+  \centerline{\includegraphics[height=4.0cm]{FCNB}}
+%  \vspace{1.5cm}
+  \centerline{FCN}\medskip
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.48\linewidth}
+  \centering
+  \centerline{\includegraphics[height=4.0cm]{FCNP}}
+%  \vspace{1.5cm}
+  \centerline{Probability map}\medskip
+\end{minipage}
+%
+\caption{Prediction via different classifiers of a random sample on the left out patient: 572123}
+\label{fig:prediction}
 %
 \end{figure}
 
