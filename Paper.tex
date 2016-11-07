@@ -8,6 +8,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[francais]{babel}
 \usepackage{hyperref}
+\usepackage{seqsplit}
 
 % Example definitions.
 % --------------------
@@ -50,18 +51,17 @@
 % -----------------------
 
 \name{Peter Naylor$^{1,2,3}$\sthanks{Peter Naylor has received a PhD
-  fellowship from the Ligue contre le Cancer. } \qquad Marick La\'e$^{4}$
-  \qquad Fabien Reyal$^{2}$\qquad Thomas Walter$^{1,2,3}$}
+  fellowship from the Ligue contre le Cancer} \qquad Marick La\'e$^{4}$
+  \qquad Fabien Reyal$^{5,6,7}$\qquad Thomas Walter$^{1,2,3}$}
 
-\address{$^{1}$MINES ParisTech, PSL Research University, CBIO - Centre
-  de Bioinformatique, 35 rue St Honoré 77300 Fontainebleau, France; 
-$\quad ^{2}$Institut Curie, 75248 Paris Cedex, France; 
-$\quad ^{3}$INSERM U900, 75248 Paris Cedex, France; 
-$\quad ^{4}$Service de Pathologie, Institut Curie, 75248 Paris Cedex,
-France;
-$\quad ^{5}$Residual Tumor \& Response to Treatment Laboratory,
-RT2Lab, Translational Research Department, Institut Curie, 26, rue d’Ulm, Paris, F-75248, France;
-$\quad ^{6}$U932, Immunity and Cancer, INSERM, Institut Curie, Paris, F-75248, France;
+\address{\normalsize $^{1}$MINES ParisTech, PSL Research University, CBIO - Centre
+  de Bioinformatique, 77300 Fontainebleau, France;\\
+\normalsize $\quad ^{2}$Institut Curie,  
+$\quad ^{3}$INSERM U900, Paris, 
+$\quad ^{4}$Service de Pathologie, Institut Curie, Paris, F-75248, France\\
+\normalsize $\quad ^{5}$Residual Tumor \& Response to Treatment Laboratory,
+RT2Lab, Translational Research Department, Institut Curie, \\
+\normalsize $\quad ^{6}$U932, Immunity and Cancer, INSERM, Institut Curie, 
 $\quad ^{7}$Department of Surgery, Institut Curie, Paris, F-75248, France.
 }
 %
@@ -75,14 +75,14 @@ Analysis and interpretation of stained tumor sections is one of the
 main tools in cancer diagnosis and prognosis, which is mainly carried
 out manually by pathologists. The avent of digital pathology provides
 us with the challenging opportunity to automatically analyze large
-amounts of these complex and large image data in order to draw
+amounts of these complex image data in order to draw
 biological conclusions from them and to study cellular and tissular
-phenotypes at a large scale. One of the bottlenecks for such an
-approach is the automatic segmentation of cell nuclei from this type
+phenotypes at a large scale. One of the bottlenecks for such
+approaches is the automatic segmentation of cell nuclei from this type
 of image data. Here, we present a fully automated workflow to segment
-nuclei from histopathology image data by training a deep neural
-network on a set of annotated images and by proposing a postprocessing
-step of the posterior probability maps to split jointly segmented
+nuclei from histopathology image data by using deep neural
+networks trained from a set of manually annotated images and by processing
+the posterior probability maps in order to split jointly segmented
 nuclei. Further, we provide the image data set that has been generated
 for this study as a benchmark set to the scientific community.  
 \end{abstract}
@@ -104,16 +104,12 @@ molecular profiling is paralleled with the more traditional
 sections. With the avent of digital pathology, i.e. the scanning and
 digital storage of diseased tissue sections, it is now possible to
 build tools for the quantitative and automatic analysis of these
-complex and informative image data. Indeed, this is a very promising
-approach for several reasons: image based approaches
-provide us with spatial information that is absent in genomic,
-transcriptomic and epigenetic studies of cancer. In addition they
-allow analysis of individual cells, such that it is possible to study
-cellular heterogeneity. Cellular heterogeneity has been acknowledged
-to be of major importance in cancer research and treatment. Also, it
-is possible to analyze cells in terms of morphology and phenotype,
-which brings in a complementary piece of functionally relevant
-information.  
+complex and informative image data. These image data are in many ways
+complementary to genomic and expression data, as they are informative
+about the spatial dimension, they allow one to assess cellular
+heterogeneity and allow for single cell analysis in terms of
+morphology and phenotype. 
+
 
 % two approaches: CAD vs. understanding
 For these reasons, analysis of histopathology data has received much
