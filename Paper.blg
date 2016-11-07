@@ -3,55 +3,47 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Paper.aux
 The style file: IEEEbib.bst
 Database file #1: strings.bib
-Warning--I didn't find a database entry for "irshad2014methods"
-Warning--I didn't find a database entry for "ranefall2016fast"
-Warning--I didn't find a database entry for "ta2009graph"
 Warning--I didn't find a database entry for "manivannanlocal"
-Warning--I didn't find a database entry for "lecun"
-Warning--I didn't find a database entry for "ImageNet"
-Warning--I didn't find a database entry for "long2015fcn"
-Warning--I didn't find a database entry for "noh2015learning"
-Warning--I didn't find a database entry for "caffe"
 Warning--I didn't find a database entry for "C2"
-You've used 4 entries,
+You've used 12 entries,
             1838 wiz_defined-function locations,
-            496 strings with 4340 characters,
-and the built_in function-call counts, 1295 in all, are:
-= -- 120
-> -- 44
-< -- 2
-+ -- 16
-- -- 12
-* -- 97
-:= -- 184
-add.period$ -- 4
-call.type$ -- 4
-change.case$ -- 4
+            536 strings with 6025 characters,
+and the built_in function-call counts, 3526 in all, are:
+= -- 311
+> -- 165
+< -- 4
++ -- 59
+- -- 47
+* -- 277
+:= -- 528
+add.period$ -- 12
+call.type$ -- 12
+change.case$ -- 12
 chr.to.int$ -- 0
-cite$ -- 4
-duplicate$ -- 60
-empty$ -- 128
-format.name$ -- 12
-if$ -- 303
+cite$ -- 12
+duplicate$ -- 156
+empty$ -- 333
+format.name$ -- 47
+if$ -- 803
 int.to.chr$ -- 0
-int.to.str$ -- 4
-missing$ -- 4
-newline$ -- 23
-num.names$ -- 4
-pop$ -- 14
+int.to.str$ -- 12
+missing$ -- 12
+newline$ -- 63
+num.names$ -- 12
+pop$ -- 40
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 40
+skip$ -- 90
 stack$ -- 0
-substring$ -- 120
-swap$ -- 26
-text.length$ -- 2
+substring$ -- 278
+swap$ -- 59
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 12
-width$ -- 5
-write$ -- 46
-(There were 10 warnings)
+while$ -- 32
+width$ -- 14
+write$ -- 131
+(There were 2 warnings)

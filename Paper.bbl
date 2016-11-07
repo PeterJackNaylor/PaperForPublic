@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Chow2012}
 K.H. Chow, Factor R.E., and Ullman K.S.,
@@ -23,5 +23,52 @@ Olaf Ronneberger, Philipp Fischer, and Thomas Brox,
   Segmentation},''
 \newblock in {\em Medical Image Computing and Computer-Assisted Intervention
   (MICCAI)}, 2015, pp. 234--241.
+
+\bibitem{irshad2014methods}
+Humayun Irshad, Antoine Veillard, Ludovic Roux, and Daniel Racoceanu,
+\newblock ``Methods for nuclei detection, segmentation, and classification in
+  digital histopathology: A review—current status and future potential,''
+\newblock {\em Biomedical Engineering, IEEE Reviews in}, vol. 7, pp. 97--114,
+  2014.
+
+\bibitem{ranefall2016fast}
+Petter Ranefall, Sajith~Kecheril Sadanandan, and Carolina W{\"a}hlby,
+\newblock ``Fast adaptive local thresholding based on ellipse fit,''
+\newblock in {\em International Symposium on Biomedical Imaging (ISBI'16),
+  Prague, Czech Republic, April 13-16, 2016}, 2016.
+
+\bibitem{ta2009graph}
+Vinh-Thong Ta, Olivier L{\'e}zoray, Abderrahim Elmoataz, and Sophie Sch{\"u}pp,
+\newblock ``Graph-based tools for microscopic cellular image segmentation,''
+\newblock {\em Pattern Recognition}, vol. 42, no. 6, pp. 1113--1125, 2009.
+
+\bibitem{lecun}
+Yann LeCun, Bernhard Boser, John~S Denker, Donnie Henderson, Richard~E Howard,
+  Wayne Hubbard, and Lawrence~D Jackel,
+\newblock ``Backpropagation applied to handwritten zip code recognition,''
+\newblock {\em Neural computation}, vol. 1, no. 4, pp. 541--551, 1989.
+
+\bibitem{ImageNet}
+Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton,
+\newblock ``Imagenet classification with deep convolutional neural networks,''
+\newblock in {\em Advances in neural information processing systems}, 2012, pp.
+  1097--1105.
+
+\bibitem{long2015fcn}
+Jonathan Long, Evan Shelhamer, and Trevor Darrell,
+\newblock ``Fully convolutional networks for semantic segmentation,''
+\newblock in {\em Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}, 2015, pp. 3431--3440.
+
+\bibitem{noh2015learning}
+Hyeonwoo Noh, Seunghoon Hong, and Bohyung Han,
+\newblock ``Learning deconvolution network for semantic segmentation,''
+\newblock {\em arXiv preprint arXiv:1505.04366}, 2015.
+
+\bibitem{jia2014caffe}
+Yangqing Jia, Evan Shelhamer, Jeff Donahue, Sergey Karayev, Jonathan Long, Ross
+  Girshick, Sergio Guadarrama, and Trevor Darrell,
+\newblock ``Caffe: Convolutional architecture for fast feature embedding,''
+\newblock {\em arXiv preprint arXiv:1408.5093}, 2014.
 
 \end{thebibliography}
