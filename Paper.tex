@@ -96,7 +96,7 @@ Histopathology, Digital Pathology, Breast Cancer, Cellular Phenotyping
 \label{sec:intro}
 
 % images in cancer research, histopathology --> digital pathology
-Today, large sequencing approaches build the main body of cancer
+\noindent Today, large sequencing approaches build the main body of cancer
 research programs and they have revolutionized our understanding of
 the molecular basis of cancer. In clinical practice however,
 molecular profiling is paralleled with the more traditional
@@ -162,8 +162,8 @@ be split.
 \section{Related work}
 \label{sec:related}
 
-In \cite{Drelie08-298}, they have a partially annotated data set of 
-histopathology images for nuclei segmentation. 
+\noindent In \cite{Drelie08-298}, they have a partially annotated data set for segmentation of 
+histopathology images for nuclei segmentation.   However their study does not sollely focus on tripple negativ breast cancer patients and not only segmentation.
 
 %% fill in more information about that dataset
 
@@ -204,7 +204,7 @@ different intuition are also possible and have been applied in this paper.
 \label{sec:dataset}
 
 %% Contribution as a dataset, small introduction
-One of the main contributions of this paper is the now public available 
+\noindent One of the main contributions of this paper is the now public available 
 nuclei detection dataset within HE stainned histopathology images which 
 can be found at website \url{http://cbio.mines-paristech.fr/~pnaylor/Downloads/HECellSegmentation.zip} 
 (not a true address). This annotated dataset provides images clustered by 
@@ -251,7 +251,7 @@ types have not been included, which means that in this dataset every annotation 
 \section{Methodology}
 \label{sec:method}
 %% Segmentation task
-Let A be the space of RGB images, A can typically be 
+\noindent Let A be the space of RGB images, A can typically be 
 $\mathbb{R}^{n \times p \times 3}$ and let B the space B the space of annotation 
 images, in our case $\{0,1\}^{n \times p}$. We have a set of 
 $(A_l,B_l)_{l \in [1, N]}$ for a supervised learning approach. Our goal is 
@@ -368,15 +368,15 @@ architecture, for a more detailed explaination please refer to \cite{long2015fcn
 however, in this network their are no skip layer as one intends to learn 
 the proper upsampling threw repeated deconvolution and convolution 
 layers. This model can also be fine tuned, for more information please 
-refer to the original paper \cite{noh2015learning}. We did not
-ensemble classifier as suggested in 
-\cite{noh2015learning} as our FCN and DeconvNet classifier achieve very similar scores on the test sets.
+refer to the original paper \cite{noh2015learning}. We also did an
+ensemble classifier of these two previous nets as suggested in 
+\cite{noh2015learning}.
 % The final architecture that we tried is the UNet. This network combines 
 %both contribution of the above networks, the UNet has a similar 
 %architecture to the DeconvNet with skip layers.
 \section{Result and discussion}
 \label{sec:result}
-We conducted our experiments on GPUs via the caffe framework, 
+\noindent We conducted our experiments on GPUs via the caffe framework, 
 \cite{jia2014caffe}. We present our results in table \ref{tab:res} where 
 we averaged the metrics other all left out patients. We also added, for 
 illustration purposes \ref{fig:prediction}, image predictions and 
@@ -398,19 +398,19 @@ We picked $\lambda = 7$ which seemed to give a nice partitionning of
 the image, this value can be found by cross validation or by simple 
 visualation of the results.
 \begin{table}
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|}
 \hline
-  & PangNet & DeconvNet & FCN \\
+  & PangNet & DeconvNet & FCN & Ensemble\\
  \hline
-Accuracy  &       0.936 & 0.968 &0.958  \\
-IU   &    0.759 &     0.856 & 0.857 \\
-Recall     &       0.744  &     0.856 & 0.855 \\
-Precision   &       0.741 &     0.858 & 0.878\\
-F1    &       0.742 &     0.856 & 0.866 \\
-TP       &       0.744 &     0.856 & 0.855  \\
-TN      &       0.963 &     0.981 &  0.977\\
-Performance    &       0.853 &     0.918 & 0.916\\
-Pixel error  &  0.063 &     0.032 & 0.042\\
+Accuracy  &       0.936 & 0.968 &0.958 & 0.968  \\
+IU   &    0.759 &     0.856 & 0.857 & 0.861 \\
+Recall     &       0.744  &     0.856 & 0.855 & 0.876\\
+Precision   &       0.741 &     0.858 & 0.878 & 0.851\\
+F1    &       0.742 &     0.856 & 0.866  & 0.863\\
+TP       &       0.744 &     0.856 & 0.855 & 0.876 \\
+TN      &       0.963 &     0.981 &  0.977 & 0.979\\
+Performance    &       0.853 &     0.918 & 0.916 & 0.928\\
+Pixel error  &  0.063 &     0.032 & 0.042 & 0.032\\
 \hline
 \end{tabular}
 \caption{Results}
