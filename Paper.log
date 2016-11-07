@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.6.16)  7 NOV 2016 20:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.6.16)  7 NOV 2016 22:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -815,8 +815,26 @@ File: FCN_WS.png Graphic file (type png)
  <use FCN_WS.png>
 Package pdftex.def Info: FCN_WS.png used on input line 657.
 (pdftex.def)             Requested size: 67.68079pt x 68.28644pt.
- [3]
-(./Paper.bbl
+
+<EnsembleB.png, id=117, 451.6875pt x 450.68375pt>
+File: EnsembleB.png Graphic file (type png)
+ <use EnsembleB.png>
+Package pdftex.def Info: EnsembleB.png used on input line 664.
+(pdftex.def)             Requested size: 68.43253pt x 68.28644pt.
+
+<EnsembleP.png, id=118, 451.6875pt x 449.68pt>
+File: EnsembleP.png Graphic file (type png)
+ <use EnsembleP.png>
+Package pdftex.def Info: EnsembleP.png used on input line 671.
+(pdftex.def)             Requested size: 68.59103pt x 68.28644pt.
+
+<Ensemble_WS.png, id=119, 448.67625pt x 450.68375pt>
+File: Ensemble_WS.png Graphic file (type png)
+ <use Ensemble_WS.png>
+Package pdftex.def Info: Ensemble_WS.png used on input line 678.
+(pdftex.def)             Requested size: 67.9763pt x 68.28644pt.
+
+[3] (./Paper.bbl
 Underfull \hbox (badness 1270) in paragraph at lines 23--27
 \OT1/ptm/m/n/10 seg-men-ta-tion,''  in \OT1/ptm/m/it/10 Me-di-cal Image Com-pu-
 ting and
@@ -830,24 +848,25 @@ p.
 
 [4 <./RGB_1.png (PNG copy)> <./GT_1.png (PNG copy)> <./RGB_2.png (PNG copy)> <.
 /GT_2.png (PNG copy)> <./RGB_3.png (PNG copy)> <./GT_3.png (PNG copy)>])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 709.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 729.
 
 [5 <./RGB_pred.png> <./GT_pred.png> <./BaochuanB.png> <./BaochuanP.png> <./Baoc
 huan_WS.png> <./DeconvNetB.png> <./DeconvNetP.png> <./DeconvNet_WS.png> <./FCNB
-.png> <./FCNP.png> <./FCN_WS.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 709.
+.png> <./FCNP.png> <./FCN_WS.png> <./EnsembleB.png> <./EnsembleP.png> <./Ensemb
+le_WS.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 729.
  (./Paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 709.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 709.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 729.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 729.
 Package rerunfilecheck Info: File `Paper.out' has not changed.
 (rerunfilecheck)             Checksum: 387274BD95A09C3CAA2745EAEF82FB68;402.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 709.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 729.
  ) 
 Here is how much of TeX's memory you used:
- 7366 strings out of 493014
- 105072 string characters out of 6133351
- 212834 words of memory out of 5000000
- 10752 multiletter control sequences out of 15000+600000
+ 7381 strings out of 493014
+ 105334 string characters out of 6133351
+ 213834 words of memory out of 5000000
+ 10764 multiletter control sequences out of 15000+600000
  23503 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  29i,10n,30p,452b,491s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -870,10 +889,10 @@ xmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2016/texmf-dist
 e1/urw/times/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/ti
 mes/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8
 a.pfb>
-Output written on Paper.pdf (5 pages, 1133416 bytes).
+Output written on Paper.pdf (5 pages, 1392866 bytes).
 PDF statistics:
- 215 PDF objects out of 1000 (max. 8388607)
+ 221 PDF objects out of 1000 (max. 8388607)
  160 compressed objects within 2 object streams
  34 named destinations out of 1000 (max. 500000)
- 150 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 165 words of extra memory for PDF output out of 10000 (max. 10000000)
 
