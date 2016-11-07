@@ -50,14 +50,15 @@
 % -----------------------
 
 \name{Peter Naylor$^{1,2,3}$\sthanks{Peter Naylor has received a PhD
-  fellowship from the Ligue contre le Cancer. } \qquad Marick Lae$^{2}$
+  fellowship from the Ligue contre le Cancer. } \qquad Marick La\'e$^{4}$
   \qquad Fabien Reyal$^{2}$\qquad Thomas Walter$^{1,2,3}$}
 
 \address{$^{1}$MINES ParisTech, PSL Research University, CBIO - Centre
   de Bioinformatique,\\ 
   35 rue St Honoré 77300 Fontainebleau, France \\
 $^{2}$Institut Curie, 75248 Paris Cedex, France\\
-$^{3}$INSERM U900, 75248 Paris Cedex, France}
+$^{3}$INSERM U900, 75248 Paris Cedex, France\\
+$^{4}$Service de Pathologie, Institut Curie, 75248 Paris Cedex, France}
 %
 \begin{document}
 %\ninept
@@ -133,7 +134,7 @@ convey them different visual characteristics, which makes it very difficult to
 design traditional image segmentation algorithms that work
 satisfactorily for all of these different cases. On the other hand,
 deep learning algorithms have been used recently with great success to
-complex segmentation tasks in biology\cite{Ciresan2012,Ronneberger2015}. 
+complex segmentation tasks in biology\cite{Ciresan2012,UNet}. 
 
 The contribution of this paper is three-fold: (1) we have generated a
 ground truth of annotated images containing segmentation results for
@@ -272,8 +273,57 @@ initialization value and if possible, we also considered pretrained layers.
 Using pretrained layers made learning more efficient and made score 
 values more robust.
 
+%% Mathematical Morphology
+The results obtained by the Deep Neural Network were encouraging, but
+touching nuclei were often segmented as one single object. This is not
+surprising, as the error at a pixel level seems very minor, and no
+shape prior is used in the model. Solving this issue by weighting the
+error term for pixels between objects did not solve the issue for our
+case (data not shown). However, we did observe that for touching and
+even partially overlapping nuclei, the posterior probability at the
+nucleus border is systematically lower than in
+the putative center of the nucleus, but may still be larger than
+typically applied thresholds.This leads to the following rationale. As in the center of nuclei, the
+posterior probability is maximal, we can readily assume that the local
+maxima of the posterior correspond to putative nuclei, which we call candidates. Let
+$\mathcal{X}=(x_1,x_2,\ldots,x_N)$be a path that joins two candidates
+(i.e. $\forall i x_i$ and $x_{i+1}$ are neighbor pixels) and
+$\mathcal{P}=(p_1,p_2,\ldots,p_N)$ the corresponding posterior
+probabilities. Without loss of generality, we assume $p_1\leq P_N$.
+We define for each path $\mathcal{X}$ a cost
+$C(\mathcal{P})=\max_{i=2 \ldots N}{p_1-p_i}$, which is the maximal
+decrease in posterior probability along the path, when starting from
+the candidate with lower probability.  Considering all paths joining two
+candidates, we can now state a criterion that allows us to decide whether to
+perform a split (and thus accept the candidates as being different
+nuclei) or not: if all the paths involve a decrease in probability
+larger than a parameter $\lambda$, we will perform a
+split. Conversely, if we can find a path that joins the two candidates
+with a probability decrease smaller or equal to $\lambda$, no split
+will be performed: we argue that in this case, it is probably one
+single object. Hence, the split is performed if: 
+\begin{equation}
+\min_{\mathcal{P}}C(\mathcal{P}) = \min_{\mathcal{P}} \{\max_{i=2
+  \ldots N}{p_1-p_i}\} > \lambda
+\end{equation}
+where $\lambda$ is a free parameter. This is actually nothing else
+than the morphological dynamics\cite{Grimaud1992}. The actual split
+locations are thus obtained by applying the watershed algorithm,
+starting from the local maxima of the posterior probability map with
+morphological dynamics larger than a free parameter $\lambda$. 
+
+To speed up this procedure, we have developed an algorithm that
+performs selection and Watershed algorithm in a single pass by
+selectively building the Watershed line or fusing the regions,
+depending on the morphological dynamic at the moment at which two
+regions get in contact. This algorithm will be made publicly available
+through the open-source software scikit-image\cite{scikit-image}, in which we implemented
+all the steps which were not related to deep learning. 
+
+
+
 \section{Different architectures/Results}
-\label{sec:method}
+\label{sec:results}
 We experience with 4 known arhitectures in semantic segmentation, one 
 will be named BaochuanNet, Fully Convolutionnal Net (FCN), DeconvNet, 
 UNet. The most basic architecture, BaochuanNet, consists of 4 
@@ -497,8 +547,8 @@ What's next?
 %a PDF file, and an HTML file. You can also use the form sent with your author
 %kit.
 
-\section{REFERENCES}
-\label{sec:ref}
+%\section{REFERENCES}
+%\label{sec:ref}
 
 %List and number all bibliographical references at the end of the
 %paper.  The references can be numbered in alphabetic order or in
@@ -511,6 +561,6 @@ What's next?
 % style file from IEEE produces unsorted bibliography list.
 % -------------------------------------------------------------------------
 \bibliographystyle{IEEEbib}
-\bibliography{strings}
+\bibliography{refs}
 
 \end{document}
