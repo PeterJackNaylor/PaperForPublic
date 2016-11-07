@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.6.16)  7 NOV 2016 13:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.6.16)  7 NOV 2016 13:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -688,11 +688,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 78.
-
-
-LaTeX Warning: Citation `Ciresan2012' on page 1 undefined on input line 137.
-
-[1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+ [1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
@@ -726,104 +722,97 @@ Underfull \hbox (badness 10000) in paragraph at lines 225--226
 
  []
 
-[2]
-
-LaTeX Warning: Citation `Grimaud1992' on page 3 undefined on input line 316.
-
-
-LaTeX Warning: Citation `scikit-image' on page 3 undefined on input line 326.
-
-<RGB_1.png, id=89, 196.48407pt x 196.48407pt>
+[2] <RGB_1.png, id=93, 196.48407pt x 196.48407pt>
 File: RGB_1.png Graphic file (type png)
  <use RGB_1.png>
 Package pdftex.def Info: RGB_1.png used on input line 496.
 (pdftex.def)             Requested size: 113.81102pt x 113.81392pt.
 
-<GT_1.png, id=90, 199.49532pt x 197.98969pt>
+<GT_1.png, id=94, 199.49532pt x 197.98969pt>
 File: GT_1.png Graphic file (type png)
  <use GT_1.png>
 Package pdftex.def Info: GT_1.png used on input line 503.
 (pdftex.def)             Requested size: 113.81102pt x 112.95197pt.
 
-<RGB_2.png, id=91, 196.48407pt x 196.48407pt>
+<RGB_2.png, id=95, 196.48407pt x 196.48407pt>
 File: RGB_2.png Graphic file (type png)
  <use RGB_2.png>
 Package pdftex.def Info: RGB_2.png used on input line 511.
 (pdftex.def)             Requested size: 113.81102pt x 113.81392pt.
 
-<GT_2.png, id=92, 197.98969pt x 198.7425pt>
+<GT_2.png, id=96, 197.98969pt x 198.7425pt>
 File: GT_2.png Graphic file (type png)
  <use GT_2.png>
 Package pdftex.def Info: GT_2.png used on input line 518.
 (pdftex.def)             Requested size: 113.81102pt x 114.24571pt.
 
-<RGB_3.png, id=93, 196.48407pt x 196.48407pt>
+<RGB_3.png, id=97, 196.48407pt x 196.48407pt>
 File: RGB_3.png Graphic file (type png)
  <use RGB_3.png>
 Package pdftex.def Info: RGB_3.png used on input line 526.
 (pdftex.def)             Requested size: 113.81102pt x 113.81392pt.
 
-<GT_3.png, id=94, 198.7425pt x 197.98969pt>
+<GT_3.png, id=98, 198.7425pt x 197.98969pt>
 File: GT_3.png Graphic file (type png)
  <use GT_3.png>
 Package pdftex.def Info: GT_3.png used on input line 533.
 (pdftex.def)             Requested size: 113.81102pt x 113.38397pt.
 
-<RGB_pred.png, id=95, 351.3125pt x 350.30875pt>
+<RGB_pred.png, id=99, 351.3125pt x 350.30875pt>
 File: RGB_pred.png Graphic file (type png)
  <use RGB_pred.png>
 Package pdftex.def Info: RGB_pred.png used on input line 547.
 (pdftex.def)             Requested size: 114.13768pt x 113.81102pt.
 
-<GT_pred.png, id=97, 351.3125pt x 351.3125pt>
+<GT_pred.png, id=101, 351.3125pt x 351.3125pt>
 File: GT_pred.png Graphic file (type png)
  <use GT_pred.png>
 Package pdftex.def Info: GT_pred.png used on input line 554.
 (pdftex.def)             Requested size: 113.81102pt x 113.81068pt.
 
-<BaochuanB.png, id=98, 350.30875pt x 353.32pt>
+<BaochuanB.png, id=102, 350.30875pt x 353.32pt>
 File: BaochuanB.png Graphic file (type png)
  <use BaochuanB.png>
 Package pdftex.def Info: BaochuanB.png used on input line 562.
 (pdftex.def)             Requested size: 112.83873pt x 113.81102pt.
 
-<BaochuanP.png, id=99, 548.0475pt x 468.75125pt>
+<BaochuanP.png, id=103, 548.0475pt x 468.75125pt>
 File: BaochuanP.png Graphic file (type png)
  <use BaochuanP.png>
 Package pdftex.def Info: BaochuanP.png used on input line 569.
 (pdftex.def)             Requested size: 133.05606pt x 113.81102pt.
 
-<DeconvNetB.png, id=100, 350.30875pt x 352.31625pt>
+<DeconvNetB.png, id=104, 350.30875pt x 352.31625pt>
 File: DeconvNetB.png Graphic file (type png)
  <use DeconvNetB.png>
 Package pdftex.def Info: DeconvNetB.png used on input line 579.
 (pdftex.def)             Requested size: 113.15945pt x 113.81102pt.
 
-<DeconvNetP.png, id=101, 555.07375pt x 468.75125pt>
+<DeconvNetP.png, id=105, 555.07375pt x 468.75125pt>
 File: DeconvNetP.png Graphic file (type png)
  <use DeconvNetP.png>
 Package pdftex.def Info: DeconvNetP.png used on input line 586.
 (pdftex.def)             Requested size: 134.7619pt x 113.81102pt.
 
-<FCNB.png, id=102, 352.31625pt x 359.3425pt>
+<FCNB.png, id=106, 352.31625pt x 359.3425pt>
 File: FCNB.png Graphic file (type png)
  <use FCNB.png>
 Package pdftex.def Info: FCNB.png used on input line 594.
 (pdftex.def)             Requested size: 111.5823pt x 113.81102pt.
 
-<FCNP.png, id=103, 545.03625pt x 469.755pt>
+<FCNP.png, id=107, 545.03625pt x 469.755pt>
 File: FCNP.png Graphic file (type png)
  <use FCNP.png>
 Package pdftex.def Info: FCNP.png used on input line 601.
 (pdftex.def)             Requested size: 132.05054pt x 113.81102pt.
  [3] (./Paper.bbl
-Underfull \hbox (badness 1270) in paragraph at lines 16--20
+Underfull \hbox (badness 1270) in paragraph at lines 23--27
 \OT1/ptm/m/n/10 seg-men-ta-tion,''  in \OT1/ptm/m/it/10 Me-di-cal Image Com-pu-
 ting and
  []
 
 
-Underfull \hbox (badness 4752) in paragraph at lines 16--20
+Underfull \hbox (badness 4752) in paragraph at lines 23--27
 \OT1/ptm/m/it/10 Computer-Assisted Intervention--MICCAI 2015\OT1/ptm/m/n/10 , p
 p.
  []
@@ -840,16 +829,12 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 653.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 653.
 Package rerunfilecheck Info: File `Paper.out' has not changed.
 (rerunfilecheck)             Checksum: C395BDD441CB250FDF5CC4E4AA5E5834;356.
-
-
-LaTeX Warning: There were undefined references.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 653.
  ) 
 Here is how much of TeX's memory you used:
- 7312 strings out of 493014
- 104251 string characters out of 6133351
- 210735 words of memory out of 5000000
+ 7315 strings out of 493014
+ 104300 string characters out of 6133351
+ 210838 words of memory out of 5000000
  10709 multiletter control sequences out of 15000+600000
  22988 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -872,10 +857,10 @@ xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/f
 onts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
 1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/time
 s/utmri8a.pfb>
-Output written on Paper.pdf (5 pages, 1380464 bytes).
+Output written on Paper.pdf (5 pages, 1380842 bytes).
 PDF statistics:
- 194 PDF objects out of 1000 (max. 8388607)
- 146 compressed objects within 2 object streams
- 31 named destinations out of 1000 (max. 500000)
+ 200 PDF objects out of 1000 (max. 8388607)
+ 152 compressed objects within 2 object streams
+ 34 named destinations out of 1000 (max. 500000)
  127 words of extra memory for PDF output out of 10000 (max. 10000000)
 

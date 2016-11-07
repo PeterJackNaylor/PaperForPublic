@@ -12,6 +12,13 @@ C~W Elston and O~Ellis,
   long-term follow-up},''
 \newblock {\em Histopathology}, vol. 19, pp. 403--410, 1991.
 
+\bibitem{Ciresan2012}
+Dan~Claudiu Ciresan, Alessandro Giusti, Luca~Maria Gambardella, and J{\"u}rgen
+  Schmidhuber,
+\newblock ``Deep neural networks segment neuronal membranes in electron
+  microscopy images,''
+\newblock in {\em NIPS}, 2012, pp. 2852--2860.
+
 \bibitem{UNet}
 Olaf Ronneberger, Philipp Fischer, and Thomas Brox,
 \newblock ``U-net: Convolutional networks for biomedical image segmentation,''
@@ -67,6 +74,19 @@ Paul~A. Yushkevich, Joseph Piven, Heather Cody~Hazlett, Rachel Gimpel~Smith,
 \newblock ``User-guided {3D} active contour segmentation of anatomical
   structures: Significantly improved efficiency and reliability,''
 \newblock {\em Neuroimage}, vol. 31, no. 3, pp. 1116--1128, 2006.
+
+\bibitem{Grimaud1992}
+Michel Grimaud,
+\newblock ``New measure of contrast: the dynamics,''
+\newblock in {\em Proc. SPIE}, 1992, vol. 1769, pp. 292--305.
+
+\bibitem{scikit-image}
+{S}t\'efan van~der Walt, {J}ohannes~{L}. {S}ch\"onberger, {J}uan
+  {Nunez-Iglesias}, {F}ran\c{c}ois {B}oulogne, {J}oshua~{D}. {W}arner, {N}eil
+  {Y}ager, {E}mmanuelle {G}ouillart, {T}ony {Y}u, and the scikit-image
+  contributors,
+\newblock ``scikit-image: image processing in {P}ython,''
+\newblock {\em PeerJ}, vol. 2, pp. e453, 6 2014.
 
 \bibitem{pang2010cell}
 Baochuan Pang, Yi~Zhang, Qianqing Chen, Zhifan Gao, Qinmu Peng, and Xinge You,
