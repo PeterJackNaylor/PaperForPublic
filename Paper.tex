@@ -356,9 +356,9 @@ architecture, for a more detailed explaination please refer to \cite{long2015fcn
 however, in this network their are no skip layer as one intends to learn 
 the proper upsampling threw repeated deconvolution and convolution 
 layers. This model can also be fine tuned, for more information please 
-refer to the original paper \cite{noh2015learning}. We did not
-ensemble classifier as suggested in 
-\cite{noh2015learning} as our FCN and DeconvNet classifier achieve very similar scores on the test sets.
+refer to the original paper \cite{noh2015learning}. We also did an
+ensemble classifier of these two previous nets as suggested in 
+\cite{noh2015learning}.
 % The final architecture that we tried is the UNet. This network combines 
 %both contribution of the above networks, the UNet has a similar 
 %architecture to the DeconvNet with skip layers.
@@ -386,19 +386,19 @@ We picked $\lambda = 7$ which seemed to give a nice partitionning of
 the image, this value can be found by cross validation or by simple 
 visualation of the results.
 \begin{table}
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|}
 \hline
-  & PangNet & DeconvNet & FCN \\
+  & PangNet & DeconvNet & FCN & Ensemble\\
  \hline
-Accuracy  &       0.936 & 0.968 &0.958  \\
-IU   &    0.759 &     0.856 & 0.857 \\
-Recall     &       0.744  &     0.856 & 0.855 \\
-Precision   &       0.741 &     0.858 & 0.878\\
-F1    &       0.742 &     0.856 & 0.866 \\
-TP       &       0.744 &     0.856 & 0.855  \\
-TN      &       0.963 &     0.981 &  0.977\\
-Performance    &       0.853 &     0.918 & 0.916\\
-Pixel error  &  0.063 &     0.032 & 0.042\\
+Accuracy  &       0.936 & 0.968 &0.958 & 0.968  \\
+IU   &    0.759 &     0.856 & 0.857 & 0.861 \\
+Recall     &       0.744  &     0.856 & 0.855 & 0.876\\
+Precision   &       0.741 &     0.858 & 0.878 & 0.851\\
+F1    &       0.742 &     0.856 & 0.866  & 0.863\\
+TP       &       0.744 &     0.856 & 0.855 & 0.876 \\
+TN      &       0.963 &     0.981 &  0.977 & 0.979\\
+Performance    &       0.853 &     0.918 & 0.916 & 0.928\\
+Pixel error  &  0.063 &     0.032 & 0.042 & 0.032\\
 \hline
 \end{tabular}
 \caption{Results}
