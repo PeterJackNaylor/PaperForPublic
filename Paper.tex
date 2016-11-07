@@ -8,7 +8,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage[francais]{babel}
 \usepackage{hyperref}
-\usepackage{seqsplit}
 
 % Example definitions.
 % --------------------
@@ -70,7 +69,7 @@ $\quad ^{7}$Department of Surgery, Institut Curie, Paris, F-75248, France.
 %\ninept
 %
 \maketitle
-\vspace{-1cm}
+
 %
 \begin{abstract}
 Analysis and interpretation of stained tumor sections is one of the
@@ -118,15 +117,20 @@ and expression data.
 
 % two approaches: CAD vs. understanding, importance of segmentation
 For these reasons, analysis of histopathology data has received much
-attention over the last years. While many approaches aim at
-automatically performing the task of a human pathologist (Computer
-Aided Diagnosis, CAD), we want to investigate the influence of
-biologically relevant features, such as phenotype distributions or
-heterogeneity measures from the tissue data on different clinical
-variables, such as resistance to treatment or relapse probability.
-One essential step is thus the segmentation of nuclei from tissue
-images,  in order to assign them a cell type or phenotypic label and
-to evaluate their spatial distribution.
+attention over the last years. In particular for approaches aiming at
+relating biologically relevant features (such as phenotype
+distributions or heterogeneity measures) to clinical variables,
+segmentation of nuclei from tissue images is essential. 
+
+%While many approaches aim at
+%automatically performing the task of a human pathologist (Computer
+%Aided Diagnosis, CAD), we want to investigate the influence of
+%biologically relevant features, such as phenotype distributions or
+%heterogeneity measures from the tissue data on different clinical
+%variables, such as resistance to treatment or relapse probability.
+%One essential step is thus the segmentation of nuclei from tissue
+%images,  in order to assign them a cell type or phenotypic label and
+%to evaluate their spatial distribution.
 
 %Most of these works are in the frame of
 %Computer Aided Diagnosis (CAD) and aim at automatically performing the
@@ -521,11 +525,8 @@ selectively building the Watershed line or fusing the regions.
 
 \section{Different architectures/Results}
 \label{sec:results}
-We experience with 3 known arhitectures in semantic segmentation,
-named PangNet, Fully Convolutionnal Net (FCN) and DeconvNet. The most
-basic architecture, PangNet, consists of 4  
-convolutional layers where each convolutional layer has 8 feature
-maps\cite{pang2010cell}.  
+\noindent We experience with 3 known arhitectures in semantic segmentation, named PangNet, Fully Convolutionnal Net (FCN) and DeconvNet. The most basic architecture, PangNet, consists of 4 
+convolutionnal layer where each convolutionnal layer has 8 feature map, for more information please refer to \cite{pang2010cell}. 
 This net, being not deep, has the advantage of being less 
 computationnally intensive. FCN is a first attempt of applying "deep 
 feature" representations to the task of semantic segmentation. This 
@@ -591,7 +592,7 @@ Pixel error  &  0.063 &     0.032 & 0.042 & 0.032\\
 \section{Conclusion}
 \label{sec:conclusion}
 
-We have presented a fully automized workflow for segmenting nuclei in
+We presented a fully automized workflow for segmenting nuclei in
 histopathology images based on deep learning and mathematical
 morphology. We have also generated a manually curated segmentation
 data base, which we make publicly available. We believe that such a
@@ -719,6 +720,97 @@ phenotypes at a tissue level and their relation to disease.
 % -------------------------------------------------------------------------
 
 
+
+
+%\begin{minipage}[b]{0.32\linewidth}
+%  \centering
+%  \centerline{\includegraphics[height=2.4cm]{BaochuanB}}
+%%  \vspace{1.5cm}
+%  \centerline{PangNet}\medskip
+%\end{minipage}
+%\hfill
+%\begin{minipage}[b]{.32\linewidth}
+%  \centering
+%  \centerline{\includegraphics[height=2.5cm]{BaochuanP}}
+%%  \vspace{1.5cm}
+%  \centerline{Probability map}\medskip
+%\end{minipage}
+%\hfill
+%\begin{minipage}[b]{.32\linewidth}
+%  \centering
+%  \centerline{\includegraphics[height=2.4cm]{Baochuan_WS}}
+%%  \vspace{1.5cm}
+%  \centerline{Watershed}\medskip
+%\end{minipage}
+%
+%%
+%%
+%\begin{minipage}[b]{0.32\linewidth}
+%  \centering
+%  \centerline{\includegraphics[height=2.4cm]{DeconvNetB}}
+%%  \vspace{1.5cm}
+%  \centerline{DeconvNet}\medskip
+%\end{minipage}
+%\hfill
+%\begin{minipage}[b]{.32\linewidth}
+%  \centering
+%  \centerline{\includegraphics[height=2.4cm]{DeconvNetP}}
+%%  \vspace{1.5cm}
+%  \centerline{Probability map}\medskip
+%\end{minipage}
+%\hfill
+%\begin{minipage}[b]{.32\linewidth}
+%  \centering
+%  \centerline{\includegraphics[height=2.4cm]{DeconvNet_WS}}
+%%  \vspace{1.5cm}
+%  \centerline{Watershed}\medskip
+%\end{minipage}
+%%
+%\begin{minipage}[b]{0.32\linewidth}
+%  \centering
+%  \centerline{\includegraphics[height=2.4cm]{FCNB}}
+%%  \vspace{1.5cm}
+%  \centerline{FCN}\medskip
+%\end{minipage}
+%\hfill
+%\begin{minipage}[b]{.32\linewidth}
+%  \centering
+%  \centerline{\includegraphics[height=2.4cm]{FCNP}}
+%%  \vspace{1.5cm}
+%  \centerline{Probability map}\medskip
+%\end{minipage}
+%\hfill
+%\begin{minipage}[b]{.32\linewidth}
+%  \centering
+%  \centerline{\includegraphics[height=2.4cm]{FCN_WS}}
+%%  \vspace{1.5cm}
+%  \centerline{Watershed}\medskip
+%\end{minipage}
+%%
+%\begin{minipage}[b]{0.32\linewidth}
+%  \centering
+%  \centerline{\includegraphics[height=2.4cm]{EnsembleB}}
+%%  \vspace{1.5cm}
+%  \centerline{Ensemble}\medskip
+%\end{minipage}
+%\hfill
+%\begin{minipage}[b]{.32\linewidth}
+%  \centering
+%  \centerline{\includegraphics[height=2.4cm]{EnsembleP}}
+%%  \vspace{1.5cm}
+%  \centerline{Probability map}\medskip
+%\end{minipage}
+%\hfill
+%\begin{minipage}[b]{.32\linewidth}
+%  \centering
+%  \centerline{\includegraphics[height=2.4cm]{Ensemble_WS}}
+%%  \vspace{1.5cm}
+%  \centerline{Watershed}\medskip
+%\end{minipage}
+%\caption{Prediction via different classifiers of a random sample on the left out patient: 581910}
+%\label{fig:prediction}
+%%
+%\end{figure}
 
 % To start a new column (but not a new page) and help balance the last-page
 % column length use \vfill\pagebreak.
