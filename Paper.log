@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.6.16)  7 NOV 2016 22:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.6.16)  7 NOV 2016 23:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -710,6 +710,12 @@ ksnap . org$[]\OT1/ptm/m/n/10 ,
  []
 
 [2]
+Overfull \hbox (4.39871pt too wide) in paragraph at lines 344--365
+\OT1/ptm/m/n/10 and De-conv-Net. The most ba-sic ar-chi-tec-ture, Pan-gNet, con
+sists
+ []
+
+
 Overfull \hbox (7.76483pt too wide) in paragraph at lines 389--404
 [][] 
  []
@@ -889,7 +895,7 @@ xmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2016/texmf-dist
 e1/urw/times/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/ti
 mes/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8
 a.pfb>
-Output written on Paper.pdf (5 pages, 1392866 bytes).
+Output written on Paper.pdf (5 pages, 1393548 bytes).
 PDF statistics:
  221 PDF objects out of 1000 (max. 8388607)
  160 compressed objects within 2 object streams
