@@ -149,6 +149,9 @@ be split.
 
 \section{Related work}
 \label{sec:related}
+
+In \cite{Drelie08-298}, they have a partially annotated data set of histopathology images for nuclei segmentation. 
+
 Image segmentation and object recognition in medical imagining have 
 been tackled for many years and many approaches have been found. 
 Methods based on mathematical morphological operators have been 
@@ -157,13 +160,17 @@ however such methods rely on the user to manually define the
 information that is relevant for his task \cite{irshad2014methods}. 
 Segmentation methods based on a strong priori information are also 
 possible and yield comparable results in terms of accuracy, in 
-\cite{ranefall2016fast} they segment the picture using a ellispe fit 
-which is considerably faster than other state of the art methods. Graph-
-based tools for segmentation are also possible in histopathology 
-\cite{ta2009graph}. \cite{manivannanlocal} focus on gland 
-segmentation, they achieve good results by predicting image patches as 
-a whole, via a classification scheme. The output confidence vector is 
-then preprocessed to obtain the final segmentation. Alternative methods 
+\cite{ranefall2016fast} they segment the picture using mathematical 
+morphology with an ellispe fit condition 
+which is considerably faster than other state of the art methods. 
+%Graph-
+%based tools for segmentation are also possible in histopathology 
+%\cite{ta2009graph}. 
+%\cite{manivannanlocal} focus on gland 
+%segmentation, they achieve good results by predicting image patches as 
+%a whole, via a classification scheme. The output confidence vector is 
+%then preprocessed to obtain the final segmentation. 
+Alternative methods 
 have arisen from the achieving Convolutional neural networks 
 \cite{lecun}, in particular strong incentive rose with the very impressive 
 results that they achieved in the pascal voc challenge with 
@@ -178,15 +185,13 @@ different intuition are also possible and have been applied in this paper.
 
 
 
-Talk about related work.
-
 \section{DataSet}
 \label{sec:dataset}
 
 %% Contribution as a dataset, small introduction
 One of the main contributions of this paper is the now public available 
 nuclei detection dataset within HE stainned histopathology images which 
-can be found at website %\url{www.cbio.ensmp.fr:/pnaylor/download/dataset.zip} 
+can be found at website \url{http://cbio.mines-paristech.fr/~pnaylor/Downloads/HECellSegmentation.zip} 
 (not a true address). This annotated dataset provides images clustered by 
 patients. Each patient has at least 3 annotated $512 \times 512$ HE 
 stainned histopathology images with their associated ground truth. Each 
@@ -196,7 +201,7 @@ values of these pixels denote different nucleus, such an annotation can
 be used in several processing step which does or doesn't take into 
 account clutered nuclei. See figure \ref{fig:annotation} for an example of 
 three annotated images. This annotation was conducted via the help of 
-the software ITK-snap, \cite{py06nimg} http://www.itksnap.org, and were annotated by the authors of the paper.
+the software ITK-snap, \cite{py06nimg} \url{http://www.itksnap.org}, and were annotated by the authors of the paper.
 
 
 %% Data set creation procedure
@@ -211,19 +216,22 @@ from the WSI. %% explain that we choose the tissue area?
 3 to 7 images were choosen from the randomly sampled images to try and give the most diversed dataset among these patients. Once the samples were choosen, we fully annotated each nuclei via the software ITK-snap and touching nuclei are differentiate via a different annotation value.
 
 %%Data set description 
-In this data set we have annotated a considerous amount of cells, 
-including normal breast cells (epithelial and lobule cells),  cancerous 
-breast cells, fibroblasts,  endothelial cells, fat cells, macrophage cells and 
-inflammatory cells (lymphocytes and plasmocytes). For the moment, cell types have not been seperated, which means that in this dataset every annotation corresponds to a global type: cell. 
+%% I asked Marick's help for this paragraph!
+In this data set we have annotated a considerous amount of cells,
+including normal epithelial and myoepithelial breast cells (localized in
+ducts and lobules), invasive carcinomatous cells, fibroblasts, endothelial
+cells, adipocytes, macrophages and
+inflammatory cells (lymphocytes and plasmocytes). For the moment, cell 
+types have not been included, which means that in this dataset every annotation corresponds to a global type: cell. We can also give some simple statistics with respect to the dataset. We have 33 images with a total of 2754 annotated cells, the maximum number of cells in one sample is 293 and the minimum number of cells in one sample is 5. We also have on average 83 cells per sample with a high standard deviation of 63.
 
-\begin{itemize}
-\item Number of images: 33 \\
-\item Number  of cells: 2754 \\
-\item Maximum number of cells in one sample: 293 \\
-\item Minimum number of cells in one sample: 5 \\
-\item Mean number of cells: 83 \\
-\item Standard deviation of number of cells: 63 \\
-\end{itemize}
+% \begin{itemize}
+% \item Number of images: 33 \\
+% \item Number  of cells: 2754 \\
+% \item Maximum number of cells in one sample: 293 \\
+% \item Minimum number of cells in one sample: 5 \\
+% \item Mean number of cells: 83 \\
+% \item Standard deviation of number of cells: 63 \\
+% \end{itemize}
 
 \section{Methodology}
 \label{sec:method}
@@ -353,7 +361,27 @@ ensemble classifier as suggested in
 %architecture to the DeconvNet with skip layers.
 \section{Result and discussion}
 \label{sec:result}
-We conducted our experiments on GPUs via the caffe framework, \cite{jia2014caffe}. We present our results in table \ref{tab:res} where we averaged the metrics other all left out patients. We also added, for illustration purposes \ref{fig:prediction}, image prediction and associated probability maps to evaluate some differences between the classifiers. We notice that the simpler net, PangNet seems to have learnt simple rules such as color information. As we can not notice by the "holes" in the probability map when the interior of the cell is brighter. On the contrary, deeper nets as FCN and DeconvNet have learnt deeper features and seem capable of recognizing whole cells. .
+We conducted our experiments on GPUs via the caffe framework, 
+\cite{jia2014caffe}. We present our results in table \ref{tab:res} where 
+we averaged the metrics other all left out patients. We also added, for 
+illustration purposes \ref{fig:prediction}, image predictions and 
+associated 
+probability maps to evaluate some differences between the classifiers. 
+We notice that the simpler net, PangNet seems to have learnt simple 
+rules such as color information. As we can not notice by the "holes" in 
+the probability map when the interior of the cell is very bright. On the 
+contrary, deeper nets as FCN and DeconvNet have learnt deeper features 
+and seem capable of recognizing whole cells. On these probability maps 
+we applied our watershed segmentation and we can picture the results in 
+the third 
+column. Our post-processing 
+scheme is very sensitive to noise as we can see in the PangNet 
+prediction, many unrelated minimas will lead to highly partitionned cell. 
+This phenomenom also appears with the DeconvNet where undesired 
+cuts were performed, like for the cell at the bottom left of the image. 
+We picked $\lambda = 7$ which seemed to give a nice partitionning of 
+the image, this value can be found by cross validation or by simple 
+visualation of the results.
 \begin{table}
 \begin{tabular}{|c|c|c|c|}
 \hline
@@ -373,6 +401,12 @@ Pixel error  &  0.063 &     0.032 & 0.042\\
 \caption{Results}
 \label{tab:res}
 \end{table}
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+%I don't really know if we need something like this...
+
 
 %%with Unet
 %\begin{tabular}{|c|c|c|c|c|c|}
@@ -557,53 +591,72 @@ Pixel error  &  0.063 &     0.032 & 0.042\\
 \end{minipage}
 
 
-\begin{minipage}[b]{0.48\linewidth}
+\begin{minipage}[b]{0.32\linewidth}
   \centering
-  \centerline{\includegraphics[height=4.0cm]{BaochuanB}}
+  \centerline{\includegraphics[height=2.4cm]{BaochuanB}}
 %  \vspace{1.5cm}
   \centerline{PangNet}\medskip
 \end{minipage}
 \hfill
-\begin{minipage}[b]{.48\linewidth}
+\begin{minipage}[b]{.32\linewidth}
   \centering
-  \centerline{\includegraphics[height=4.0cm]{BaochuanP}}
+  \centerline{\includegraphics[height=2.5cm]{BaochuanP}}
 %  \vspace{1.5cm}
   \centerline{Probability map}\medskip
 \end{minipage}
-
-
-%
-%
-\begin{minipage}[b]{.48\linewidth}
+\hfill
+\begin{minipage}[b]{.32\linewidth}
   \centering
-  \centerline{\includegraphics[height=4.0cm]{DeconvNetB}}
+  \centerline{\includegraphics[height=2.4cm]{Baochuan_WS}}
+%  \vspace{1.5cm}
+  \centerline{Watershed}\medskip
+\end{minipage}
+
+%
+%
+\begin{minipage}[b]{0.32\linewidth}
+  \centering
+  \centerline{\includegraphics[height=2.4cm]{DeconvNetB}}
 %  \vspace{1.5cm}
   \centerline{DeconvNet}\medskip
 \end{minipage}
 \hfill
-\begin{minipage}[b]{0.48\linewidth}
+\begin{minipage}[b]{.32\linewidth}
   \centering
-  \centerline{\includegraphics[height=4.0cm]{DeconvNetP}}
+  \centerline{\includegraphics[height=2.4cm]{DeconvNetP}}
 %  \vspace{1.5cm}
   \centerline{Probability map}\medskip
 \end{minipage}
-%
-%
-\begin{minipage}[b]{.48\linewidth}
+\hfill
+\begin{minipage}[b]{.32\linewidth}
   \centering
-  \centerline{\includegraphics[height=4.0cm]{FCNB}}
+  \centerline{\includegraphics[height=2.4cm]{DeconvNet_WS}}
+%  \vspace{1.5cm}
+  \centerline{Watershed}\medskip
+\end{minipage}
+%
+\begin{minipage}[b]{0.32\linewidth}
+  \centering
+  \centerline{\includegraphics[height=2.4cm]{FCNB}}
 %  \vspace{1.5cm}
   \centerline{FCN}\medskip
 \end{minipage}
 \hfill
-\begin{minipage}[b]{0.48\linewidth}
+\begin{minipage}[b]{.32\linewidth}
   \centering
-  \centerline{\includegraphics[height=4.0cm]{FCNP}}
+  \centerline{\includegraphics[height=2.4cm]{FCNP}}
 %  \vspace{1.5cm}
   \centerline{Probability map}\medskip
 \end{minipage}
+\hfill
+\begin{minipage}[b]{.32\linewidth}
+  \centering
+  \centerline{\includegraphics[height=2.4cm]{FCN_WS}}
+%  \vspace{1.5cm}
+  \centerline{Watershed}\medskip
+\end{minipage}
 %
-\caption{Prediction via different classifiers of a random sample on the left out patient: 572123}
+\caption{Prediction via different classifiers of a random sample on the left out patient: 581910}
 \label{fig:prediction}
 %
 \end{figure}
