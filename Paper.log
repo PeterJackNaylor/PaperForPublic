@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.6.16)  3 NOV 2016 14:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.6.16)  6 NOV 2016 21:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -219,74 +219,121 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 54.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 64.
-
-Underfull \hbox (badness 1067) in paragraph at lines 78--80
-\OT1/ptm/m/n/10 seg-men-ta-tion, histopathol-ogy anal-y-sis helped by im-ages.
- []
-
-
-Overfull \hbox (136.54283pt too wide) in paragraph at lines 84--97
-\OT1/ptm/m/n/10 histopathol-ogy im-ages which can be found at www.cbio.ensmp.fr
-:/pnaylor/download/dataset.zip
- []
-
-[1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+ [1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
 ]
-[2]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 142.
 
-LaTeX Warning: Citation `Lamp86' on page 3 undefined on input line 285.
 
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 142.
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--144
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
+
+ []
+
+
+Overfull \hbox (44.0744pt too wide) in paragraph at lines 223--236
+[] 
+ []
+
+
+Underfull \vbox (badness 2150) has occurred while \output is active []
+
+ [2]
 <RGB_1.png, id=23, 196.48407pt x 196.48407pt>
 File: RGB_1.png Graphic file (type png)
  <use RGB_1.png>
-Package pdftex.def Info: RGB_1.png used on input line 295.
+Package pdftex.def Info: RGB_1.png used on input line 346.
 (pdftex.def)             Requested size: 241.84842pt x 241.86583pt.
 File: RGB_1.png Graphic file (type png)
  <use RGB_1.png>
-Package pdftex.def Info: RGB_1.png used on input line 302.
+Package pdftex.def Info: RGB_1.png used on input line 353.
 (pdftex.def)             Requested size: 113.81102pt x 113.81392pt.
 
 <GT_1.png, id=24, 199.49532pt x 197.98969pt>
 File: GT_1.png Graphic file (type png)
  <use GT_1.png>
-Package pdftex.def Info: GT_1.png used on input line 309.
+Package pdftex.def Info: GT_1.png used on input line 360.
 (pdftex.def)             Requested size: 113.81102pt x 112.95197pt.
 
 <RGB_2.png, id=25, 196.48407pt x 196.48407pt>
 File: RGB_2.png Graphic file (type png)
  <use RGB_2.png>
-Package pdftex.def Info: RGB_2.png used on input line 317.
+Package pdftex.def Info: RGB_2.png used on input line 368.
 (pdftex.def)             Requested size: 113.81102pt x 113.81392pt.
 
 <GT_2.png, id=26, 197.98969pt x 198.7425pt>
 File: GT_2.png Graphic file (type png)
  <use GT_2.png>
-Package pdftex.def Info: GT_2.png used on input line 324.
+Package pdftex.def Info: GT_2.png used on input line 375.
 (pdftex.def)             Requested size: 113.81102pt x 114.24571pt.
 
 <RGB_3.png, id=27, 196.48407pt x 196.48407pt>
 File: RGB_3.png Graphic file (type png)
  <use RGB_3.png>
-Package pdftex.def Info: RGB_3.png used on input line 332.
+Package pdftex.def Info: RGB_3.png used on input line 383.
 (pdftex.def)             Requested size: 113.81102pt x 113.81392pt.
 
 <GT_3.png, id=28, 198.7425pt x 197.98969pt>
 File: GT_3.png Graphic file (type png)
  <use GT_3.png>
-Package pdftex.def Info: GT_3.png used on input line 339.
+Package pdftex.def Info: GT_3.png used on input line 390.
 (pdftex.def)             Requested size: 113.81102pt x 113.38397pt.
 
 
-LaTeX Warning: Float too large for page by 38.05092pt on input line 347.
+LaTeX Warning: Float too large for page by 38.05092pt on input line 398.
+
+[3]
+
+LaTeX Warning: Citation `C2' on page 4 undefined on input line 429.
+
+(./Paper.bbl
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ” in font ptmr7t!
+
+Underfull \hbox (badness 1748) in paragraph at lines 22--27
+\OT1/ptm/m/n/10 ``Lo-cal struc-ture pre-dic-tion for gland seg-men-ta-tion,''
+ []
 
 
-LaTeX Warning: Citation `C2' on page 3 undefined on input line 378.
+Underfull \hbox (badness 2080) in paragraph at lines 22--27
+\OT1/ptm/m/n/10 in \OT1/ptm/m/it/10 In-ter-na-tional Sym-po-sium on Biomed-i-ca
+l Imag-ing
+ []
 
-No file Paper.bbl.
-[3] [4
+) [4] [5
 
  <./RGB_1.png (PNG copy)> <./GT_1.png (PNG copy)> <./RGB_2.png (PNG copy)> <./G
 T_2.png (PNG copy)> <./RGB_3.png (PNG copy)> <./GT_3.png (PNG copy)>]
@@ -299,10 +346,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2305 strings out of 493014
- 31148 string characters out of 6133351
- 98031 words of memory out of 5000000
- 5799 multiletter control sequences out of 15000+600000
+ 2334 strings out of 493014
+ 31591 string characters out of 6133351
+ 101055 words of memory out of 5000000
+ 5823 multiletter control sequences out of 15000+600000
  24573 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,10n,24p,338b,281s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -321,10 +368,10 @@ e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2
 -dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fon
 ts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on Paper.pdf (4 pages, 600653 bytes).
+Output written on Paper.pdf (5 pages, 608928 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
+ 83 PDF objects out of 1000 (max. 8388607)
+ 55 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
