@@ -54,11 +54,16 @@
   \qquad Fabien Reyal$^{2}$\qquad Thomas Walter$^{1,2,3}$}
 
 \address{$^{1}$MINES ParisTech, PSL Research University, CBIO - Centre
-  de Bioinformatique,\\ 
-  35 rue St Honoré 77300 Fontainebleau, France \\
-$^{2}$Institut Curie, 75248 Paris Cedex, France\\
-$^{3}$INSERM U900, 75248 Paris Cedex, France\\
-$^{4}$Service de Pathologie, Institut Curie, 75248 Paris Cedex, France}
+  de Bioinformatique, 35 rue St Honoré 77300 Fontainebleau, France; 
+$\quad ^{2}$Institut Curie, 75248 Paris Cedex, France; 
+$\quad ^{3}$INSERM U900, 75248 Paris Cedex, France; 
+$\quad ^{4}$Service de Pathologie, Institut Curie, 75248 Paris Cedex,
+France;
+$\quad ^{5}$Residual Tumor \& Response to Treatment Laboratory,
+RT2Lab, Translational Research Department, Institut Curie, 26, rue d’Ulm, Paris, F-75248, France;
+$\quad ^{6}$U932, Immunity and Cancer, INSERM, Institut Curie, Paris, F-75248, France;
+$\quad ^{7}$Department of Surgery, Institut Curie, Paris, F-75248, France.
+}
 %
 \begin{document}
 %\ninept
@@ -66,18 +71,25 @@ $^{4}$Service de Pathologie, Institut Curie, 75248 Paris Cedex, France}
 \maketitle
 %
 \begin{abstract}
-%The abstract should appear at the top of the left-hand column of text, about
-%0.5 inch (12 mm) below the title area and no more than 3.125 inches (80 mm) in
-%length.  Leave a 0.5 inch (12 mm) space between the end of the abstract and the
-%beginning of the main text.  The abstract should contain about 100 to 150
-%words, and should be identical to the abstract text submitted electronically
-%along with the paper cover sheet.  All manuscripts must be in English, printed
-%in black ink.
+Analysis and interpretation of stained tumor sections is one of the
+main tools in cancer diagnosis and prognosis, which is mainly carried
+out manually by pathologists. The avent of digital pathology provides
+us with the challenging opportunity to automatically analyze large
+amounts of these complex and large image data in order to draw
+biological conclusions from them and to study cellular and tissular
+phenotypes at a large scale. One of the bottlenecks for such an
+approach is the automatic segmentation of cell nuclei from this type
+of image data. Here, we present a fully automated workflow to segment
+nuclei from histopathology image data by training a deep neural
+network on a set of annotated images and by proposing a postprocessing
+step of the posterior probability maps to split jointly segmented
+nuclei. Further, we provide the image data set that has been generated
+for this study as a benchmark set to the scientific community.  
 \end{abstract}
 %
 \begin{keywords}
-Deep Learnnig, Convolutional Neural Networks, Nuclei Segmentation,
-Histpathology, Digital Pathology, Breast Cancer, Cellular Phenotyping
+Deep Learning, Convolutional Neural Networks, Nuclei Segmentation,
+Histopathology, Digital Pathology, Breast Cancer, Cellular Phenotyping
 \end{keywords}
 %
 \section{Introduction}
