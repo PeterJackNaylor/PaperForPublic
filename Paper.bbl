@@ -1,17 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{Chow2012}
-Kin-Hoe Chow, Rachel~E Factor, and Katharine~S Ullman,
-\newblock ``{The nuclear envelope environment and its cancer connections.},''
-\newblock {\em Nature reviews. Cancer}, vol. 12, no. 3, pp. 196--209, mar 2012.
-
-\bibitem{Elston1991}
-C~W Elston and O~Ellis,
-\newblock ``{Pathological prognostic factors in breast cancer . I . The value
-  of histological grade in breast cancer : experience from a large study with
-  long-term follow-up},''
-\newblock {\em Histopathology}, vol. 19, pp. 403--410, 1991.
-
 \bibitem{Ciresan2012}
 Dan~Claudiu Ciresan, Alessandro Giusti, Luca~Maria Gambardella, and J{\"u}rgen
   Schmidhuber,
@@ -25,10 +13,22 @@ Olaf Ronneberger, Philipp Fischer, and Thomas Brox,
 \newblock in {\em Medical Image Computing and Computer-Assisted
   Intervention--MICCAI 2015}, pp. 234--241. Springer, 2015.
 
-\bibitem{Drelie08-298}
-Elisa~Drelie Gelasca, Jiyun Byun, Boguslaw Obara, and B.S. Manjunath,
-\newblock ``Evaluation and benchmark for biological image segmentation,''
-\newblock in {\em IEEE International Conference on Image Processing}, Oct 2008.
+\bibitem{Yuan2012}
+Yinyin Yuan, Henrik Failmezger, Oscar~M Rueda, H~Raza Ali, Stefan Gr{\"{a}}f,
+  Suet-Feung Chin, Roland~F Schwarz, Christina Curtis, Mark~J Dunning, Helen
+  Bardwell, Nicola Johnson, Sarah Doyle, Gulisa Turashvili, Elena Provenzano,
+  Sam Aparicio, Carlos Caldas, and Florian Markowetz,
+\newblock ``{Quantitative image analysis of cellular heterogeneity in breast
+  tumors complements genomic profiling.},''
+\newblock {\em Science translational medicine}, vol. 4, no. 157, pp. 157ra143,
+  oct 2012.
+
+\bibitem{Kulikova2012}
+Maria Kulikova, Antoine Veillard, Ludovic Roux, and Daniel Racoceanu,
+\newblock ``{Nuclei Extraction from Histopathological Images using a Marked
+  Point Process Approach},''
+\newblock in {\em SPIE Proceedings}, David~R. Haynor and S{\'{e}}bastien
+  Ourselin, Eds. 2012, p.~8, Springer.
 
 \bibitem{irshad2014methods}
 Humayun Irshad, Antoine Veillard, Ludovic Roux, and Daniel Racoceanu,
@@ -37,29 +37,16 @@ Humayun Irshad, Antoine Veillard, Ludovic Roux, and Daniel Racoceanu,
 \newblock {\em Biomedical Engineering, IEEE Reviews in}, vol. 7, pp. 97--114,
   2014.
 
-\bibitem{ranefall2016fast}
-Petter Ranefall, Sajith~Kecheril Sadanandan, and Carolina W{\"a}hlby,
-\newblock ``Fast adaptive local thresholding based on ellipse fit,''
-\newblock in {\em International Symposium on Biomedical Imaging (ISBI'16),
-  Prague, Czech Republic, April 13-16, 2016}, 2016.
-
-\bibitem{lecun}
-Yann LeCun, Bernhard Boser, John~S Denker, Donnie Henderson, Richard~E Howard,
-  Wayne Hubbard, and Lawrence~D Jackel,
-\newblock ``Backpropagation applied to handwritten zip code recognition,''
-\newblock {\em Neural computation}, vol. 1, no. 4, pp. 541--551, 1989.
-
-\bibitem{ImageNet}
-Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton,
-\newblock ``Imagenet classification with deep convolutional neural networks,''
-\newblock in {\em Advances in neural information processing systems}, 2012, pp.
-  1097--1105.
-
 \bibitem{long2015fcn}
 Jonathan Long, Evan Shelhamer, and Trevor Darrell,
 \newblock ``Fully convolutional networks for semantic segmentation,''
 \newblock in {\em Proceedings of the IEEE Conference on Computer Vision and
   Pattern Recognition}, 2015, pp. 3431--3440.
+
+\bibitem{Drelie08-298}
+Elisa~Drelie Gelasca, Jiyun Byun, Boguslaw Obara, and B.S. Manjunath,
+\newblock ``Evaluation and benchmark for biological image segmentation,''
+\newblock in {\em IEEE International Conference on Image Processing}, Oct 2008.
 
 \bibitem{py06nimg}
 Paul~A. Yushkevich, Joseph Piven, Heather Cody~Hazlett, Rachel Gimpel~Smith,
@@ -72,14 +59,6 @@ Paul~A. Yushkevich, Joseph Piven, Heather Cody~Hazlett, Rachel Gimpel~Smith,
 Michel Grimaud,
 \newblock ``New measure of contrast: the dynamics,''
 \newblock in {\em Proc. SPIE}, 1992, vol. 1769, pp. 292--305.
-
-\bibitem{scikit-image}
-{S}t\'efan van~der Walt, {J}ohannes~{L}. {S}ch\"onberger, {J}uan
-  {Nunez-Iglesias}, {F}ran\c{c}ois {B}oulogne, {J}oshua~{D}. {W}arner, {N}eil
-  {Y}ager, {E}mmanuelle {G}ouillart, {T}ony {Y}u, and the scikit-image
-  contributors,
-\newblock ``scikit-image: image processing in {P}ython,''
-\newblock {\em PeerJ}, vol. 2, pp. e453, 6 2014.
 
 \bibitem{pang2010cell}
 Baochuan Pang, Yi~Zhang, Qianqing Chen, Zhifan Gao, Qinmu Peng, and Xinge You,

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.6.16)  7 NOV 2016 23:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.6.16)  8 NOV 2016 01:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -586,21 +586,21 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 (./Paper.aux)
 \openout1 = `Paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 63.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 68.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
@@ -632,23 +632,23 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \degres on input line 63.
+LaTeX Info: Redefining \degres on input line 68.
 
 
 Package frenchb.ldf Warning: Figures' and tables' captions might look like
 (frenchb.ldf)                `Figure 1:' which is wrong in French.
 (frenchb.ldf)                Check your class or packages to change this;
-(frenchb.ldf)                reported on input line 63.
+(frenchb.ldf)                reported on input line 68.
 
-LaTeX Info: Redefining \dots on input line 63.
-LaTeX Info: Redefining \up on input line 63.
+LaTeX Info: Redefining \dots on input line 68.
+LaTeX Info: Redefining \up on input line 68.
 
 Package frenchb.ldf Warning: OT1 encoding should not be used for French.
 (frenchb.ldf)                Add \usepackage[T1]{fontenc} to the preamble
-(frenchb.ldf)                of your document, on input line 63.
+(frenchb.ldf)                of your document, on input line 68.
 
 \AtBeginShipoutBox=\box29
-Package hyperref Info: Link coloring OFF on input line 63.
+Package hyperref Info: Link coloring OFF on input line 68.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -657,225 +657,209 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count121
 )
-LaTeX Info: Redefining \ref on input line 63.
-LaTeX Info: Redefining \pageref on input line 63.
-LaTeX Info: Redefining \nameref on input line 63.
+LaTeX Info: Redefining \ref on input line 68.
+LaTeX Info: Redefining \pageref on input line 68.
+LaTeX Info: Redefining \nameref on input line 68.
 
 (./Paper.out) (./Paper.out)
 \@outlinefile=\write3
 \openout3 = `Paper.out'.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
-LaTeX Font Info:    Try loading font information for U+msa on input line 68.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 72.
+LaTeX Font Info:    Try loading font information for U+msa on input line 72.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 68.
+LaTeX Font Info:    Try loading font information for U+msb on input line 72.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 68.
+Overfull \hbox (2.25902pt too wide) in paragraph at lines 72--72
+ [][] 
+ []
 
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 72.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 68.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 72.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 74.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 78.
- [1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 91.
+
+Underfull \hbox (badness 1783) in paragraph at lines 208--222
+[]\OT1/ptm/m/n/10 Alternative me-thods have ari-sen from the achie-ving
+ []
+
+[1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
 ]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 197.
+<RGB_1.png, id=62, 196.48407pt x 196.48407pt>
+File: RGB_1.png Graphic file (type png)
+ <use RGB_1.png>
+Package pdftex.def Info: RGB_1.png used on input line 233.
+(pdftex.def)             Requested size: 113.81102pt x 113.81392pt.
+
+<GT_1.png, id=63, 199.49532pt x 197.98969pt>
+File: GT_1.png Graphic file (type png)
+ <use GT_1.png>
+Package pdftex.def Info: GT_1.png used on input line 240.
+(pdftex.def)             Requested size: 113.81102pt x 112.95197pt.
+
+<RGB_3.png, id=64, 196.48407pt x 196.48407pt>
+File: RGB_3.png Graphic file (type png)
+ <use RGB_3.png>
+Package pdftex.def Info: RGB_3.png used on input line 263.
+(pdftex.def)             Requested size: 113.81102pt x 113.81392pt.
+
+<GT_3.png, id=65, 198.7425pt x 197.98969pt>
+File: GT_3.png Graphic file (type png)
+ <use GT_3.png>
+Package pdftex.def Info: GT_3.png used on input line 270.
+(pdftex.def)             Requested size: 113.81102pt x 113.38397pt.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 287.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 195--208
-[]$\OT1/pcr/m/n/10 http : / / cbio . mines-[]paristech . fr / []pnaylor /
+Underfull \hbox (badness 2384) in paragraph at lines 285--297
+\OT1/pcr/m/n/10 mines -[] paristech . fr / []pnaylor / BNS . zip$[] \OT1/ptm/m/
+n/10 (not a
  []
 
+[2 <./RGB_1.png (PNG copy)> <./GT_1.png (PNG copy)> <./RGB_3.png (PNG copy)> <.
+/GT_3.png (PNG copy)>] <RGB_pred.png, id=89, 265.99374pt x 265.99374pt>
+File: RGB_pred.png Graphic file (type png)
 
-Underfull \hbox (badness 1412) in paragraph at lines 195--208
-\OT1/ptm/m/n/10 soft-ware ITK-snap, [[]] []$\OT1/pcr/m/n/10 http : / / www . it
-ksnap . org$[]\OT1/ptm/m/n/10 ,
- []
+<use RGB_pred.png>
+Package pdftex.def Info: RGB_pred.png used on input line 438.
+(pdftex.def)             Requested size: 85.35513pt x 85.35826pt.
+ <GT_pred.png, id=91, 496.85625pt x 496.85625pt>
+File: GT_pred.png Graphic file (type png)
 
-[2]
-Overfull \hbox (4.39871pt too wide) in paragraph at lines 344--365
+<use GT_pred.png>
+Package pdftex.def Info: GT_pred.png used on input line 445.
+(pdftex.def)             Requested size: 85.35826pt x 85.35146pt.
+ <BaochuanB.png, id=92, 263.98625pt x 266.9975pt>
+File: BaochuanB.png Graphic file (type png)
+
+<use BaochuanB.png>
+Package pdftex.def Info: BaochuanB.png used on input line 453.
+(pdftex.def)             Requested size: 67.51498pt x 68.28644pt.
+ <BaochuanP.png, id=93, 271.0125pt x 236.885pt>
+File: BaochuanP.png Graphic file (type png)
+
+<use BaochuanP.png>
+Package pdftex.def Info: BaochuanP.png used on input line 460.
+(pdftex.def)             Requested size: 81.3788pt x 71.13188pt.
+ <Baochuan_WS.png, id=94, 226.8475pt x 225.84375pt>
+File: Baochuan_WS.png Graphic file (type png)
+
+<use Baochuan_WS.png>
+Package pdftex.def Info: Baochuan_WS.png used on input line 467.
+(pdftex.def)             Requested size: 68.59128pt x 68.28644pt.
+ <DeconvNetB.png, id=95, 262.9825pt x 265.99374pt>
+File: DeconvNetB.png Graphic file (type png)
+
+<use DeconvNetB.png>
+Package pdftex.def Info: DeconvNetB.png used on input line 476.
+(pdftex.def)             Requested size: 67.51108pt x 68.28644pt.
+ <DeconvNetP.png, id=96, 275.0275pt x 234.8775pt>
+File: DeconvNetP.png Graphic file (type png)
+
+<use DeconvNetP.png>
+Package pdftex.def Info: DeconvNetP.png used on input line 483.
+(pdftex.def)             Requested size: 79.95737pt x 68.28644pt.
+ <DeconvNet_WS.png, id=97, 224.84pt x 225.84375pt>
+File: DeconvNet_WS.png Graphic file (type png)
+
+<use DeconvNet_WS.png>
+Package pdftex.def Info: DeconvNet_WS.png used on input line 490.
+(pdftex.def)             Requested size: 67.98428pt x 68.28644pt.
+ <FCNB.png, id=98, 263.98625pt x 265.99374pt>
+File: FCNB.png Graphic file (type png)
+
+<use FCNB.png>
+Package pdftex.def Info: FCNB.png used on input line 497.
+(pdftex.def)             Requested size: 67.76875pt x 68.28644pt.
+ <FCNP.png, id=99, 271.0125pt x 235.88126pt>
+File: FCNP.png Graphic file (type png)
+ <use FCNP.png>
+Package pdftex.def Info: FCNP.png used on input line 504.
+(pdftex.def)             Requested size: 78.45514pt x 68.28644pt.
+
+<FCN_WS.png, id=100, 223.83624pt x 225.84375pt>
+File: FCN_WS.png Graphic file (type png)
+ <use FCN_WS.png>
+Package pdftex.def Info: FCN_WS.png used on input line 511.
+(pdftex.def)             Requested size: 67.68079pt x 68.28644pt.
+
+Overfull \hbox (4.39871pt too wide) in paragraph at lines 553--570
 \OT1/ptm/m/n/10 and De-conv-Net. The most ba-sic ar-chi-tec-ture, Pan-gNet, con
 sists
  []
 
-
-Overfull \hbox (7.76483pt too wide) in paragraph at lines 389--404
+[3 <./RGB_pred.png> <./GT_pred.png> <./BaochuanB.png> <./BaochuanP.png> <./Baoc
+huan_WS.png> <./DeconvNetB.png> <./DeconvNetP.png> <./DeconvNet_WS.png> <./FCNB
+.png> <./FCNP.png> <./FCN_WS.png>]
+Overfull \hbox (7.76483pt too wide) in paragraph at lines 596--611
 [][] 
  []
 
-<RGB_1.png, id=99, 196.48407pt x 196.48407pt>
-File: RGB_1.png Graphic file (type png)
- <use RGB_1.png>
-Package pdftex.def Info: RGB_1.png used on input line 533.
-(pdftex.def)             Requested size: 113.81102pt x 113.81392pt.
+(./Paper.bbl
+Underfull \vbox (badness 2065) has occurred while \output is active []
 
-<GT_1.png, id=100, 199.49532pt x 197.98969pt>
-File: GT_1.png Graphic file (type png)
- <use GT_1.png>
-Package pdftex.def Info: GT_1.png used on input line 540.
-(pdftex.def)             Requested size: 113.81102pt x 112.95197pt.
 
-<RGB_2.png, id=101, 196.48407pt x 196.48407pt>
-File: RGB_2.png Graphic file (type png)
- <use RGB_2.png>
-Package pdftex.def Info: RGB_2.png used on input line 548.
-(pdftex.def)             Requested size: 113.81102pt x 113.81392pt.
-
-<GT_2.png, id=102, 197.98969pt x 198.7425pt>
-File: GT_2.png Graphic file (type png)
- <use GT_2.png>
-Package pdftex.def Info: GT_2.png used on input line 555.
-(pdftex.def)             Requested size: 113.81102pt x 114.24571pt.
-
-<RGB_3.png, id=103, 196.48407pt x 196.48407pt>
-File: RGB_3.png Graphic file (type png)
- <use RGB_3.png>
-Package pdftex.def Info: RGB_3.png used on input line 563.
-(pdftex.def)             Requested size: 113.81102pt x 113.81392pt.
-
-<GT_3.png, id=104, 198.7425pt x 197.98969pt>
-File: GT_3.png Graphic file (type png)
- <use GT_3.png>
-Package pdftex.def Info: GT_3.png used on input line 570.
-(pdftex.def)             Requested size: 113.81102pt x 113.38397pt.
-
-<RGB_pred.png, id=105, 265.99374pt x 265.99374pt>
-File: RGB_pred.png Graphic file (type png)
- <use RGB_pred.png>
-Package pdftex.def Info: RGB_pred.png used on input line 584.
-(pdftex.def)             Requested size: 113.81091pt x 113.81102pt.
-
-<GT_pred.png, id=107, 496.85625pt x 496.85625pt>
-File: GT_pred.png Graphic file (type png)
- <use GT_pred.png>
-Package pdftex.def Info: GT_pred.png used on input line 591.
-(pdftex.def)             Requested size: 113.81102pt x 113.80447pt.
-
-<BaochuanB.png, id=108, 263.98625pt x 266.9975pt>
-File: BaochuanB.png Graphic file (type png)
- <use BaochuanB.png>
-Package pdftex.def Info: BaochuanB.png used on input line 599.
-(pdftex.def)             Requested size: 67.51498pt x 68.28644pt.
-
-<BaochuanP.png, id=109, 271.0125pt x 236.885pt>
-File: BaochuanP.png Graphic file (type png)
- <use BaochuanP.png>
-Package pdftex.def Info: BaochuanP.png used on input line 606.
-(pdftex.def)             Requested size: 81.3788pt x 71.13188pt.
-
-<Baochuan_WS.png, id=110, 226.8475pt x 225.84375pt>
-File: Baochuan_WS.png Graphic file (type png)
- <use Baochuan_WS.png>
-Package pdftex.def Info: Baochuan_WS.png used on input line 613.
-(pdftex.def)             Requested size: 68.59128pt x 68.28644pt.
-
-<DeconvNetB.png, id=111, 262.9825pt x 265.99374pt>
-File: DeconvNetB.png Graphic file (type png)
- <use DeconvNetB.png>
-Package pdftex.def Info: DeconvNetB.png used on input line 622.
-(pdftex.def)             Requested size: 67.51108pt x 68.28644pt.
-
-<DeconvNetP.png, id=112, 275.0275pt x 234.8775pt>
-File: DeconvNetP.png Graphic file (type png)
- <use DeconvNetP.png>
-Package pdftex.def Info: DeconvNetP.png used on input line 629.
-(pdftex.def)             Requested size: 79.95737pt x 68.28644pt.
-
-<DeconvNet_WS.png, id=113, 224.84pt x 225.84375pt>
-File: DeconvNet_WS.png Graphic file (type png)
- <use DeconvNet_WS.png>
-Package pdftex.def Info: DeconvNet_WS.png used on input line 636.
-(pdftex.def)             Requested size: 67.98428pt x 68.28644pt.
-
-<FCNB.png, id=114, 263.98625pt x 265.99374pt>
-File: FCNB.png Graphic file (type png)
- <use FCNB.png>
-Package pdftex.def Info: FCNB.png used on input line 643.
-(pdftex.def)             Requested size: 67.76875pt x 68.28644pt.
-
-<FCNP.png, id=115, 271.0125pt x 235.88126pt>
-File: FCNP.png Graphic file (type png)
- <use FCNP.png>
-Package pdftex.def Info: FCNP.png used on input line 650.
-(pdftex.def)             Requested size: 78.45514pt x 68.28644pt.
-
-<FCN_WS.png, id=116, 223.83624pt x 225.84375pt>
-File: FCN_WS.png Graphic file (type png)
- <use FCN_WS.png>
-Package pdftex.def Info: FCN_WS.png used on input line 657.
-(pdftex.def)             Requested size: 67.68079pt x 68.28644pt.
-
-<EnsembleB.png, id=117, 451.6875pt x 450.68375pt>
-File: EnsembleB.png Graphic file (type png)
- <use EnsembleB.png>
-Package pdftex.def Info: EnsembleB.png used on input line 664.
-(pdftex.def)             Requested size: 68.43253pt x 68.28644pt.
-
-<EnsembleP.png, id=118, 451.6875pt x 449.68pt>
-File: EnsembleP.png Graphic file (type png)
- <use EnsembleP.png>
-Package pdftex.def Info: EnsembleP.png used on input line 671.
-(pdftex.def)             Requested size: 68.59103pt x 68.28644pt.
-
-<Ensemble_WS.png, id=119, 448.67625pt x 450.68375pt>
-File: Ensemble_WS.png Graphic file (type png)
- <use Ensemble_WS.png>
-Package pdftex.def Info: Ensemble_WS.png used on input line 678.
-(pdftex.def)             Requested size: 67.9763pt x 68.28644pt.
-
-[3] (./Paper.bbl
-Underfull \hbox (badness 1270) in paragraph at lines 23--27
+Underfull \hbox (badness 1270) in paragraph at lines 11--15
 \OT1/ptm/m/n/10 seg-men-ta-tion,''  in \OT1/ptm/m/it/10 Me-di-cal Image Com-pu-
 ting and
  []
 
 
-Underfull \hbox (badness 4752) in paragraph at lines 23--27
+Underfull \hbox (badness 4752) in paragraph at lines 11--15
 \OT1/ptm/m/it/10 Computer-Assisted Intervention--MICCAI 2015\OT1/ptm/m/n/10 , p
 p.
  []
 
-[4 <./RGB_1.png (PNG copy)> <./GT_1.png (PNG copy)> <./RGB_2.png (PNG copy)> <.
-/GT_2.png (PNG copy)> <./RGB_3.png (PNG copy)> <./GT_3.png (PNG copy)>])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 729.
 
-[5 <./RGB_pred.png> <./GT_pred.png> <./BaochuanB.png> <./BaochuanP.png> <./Baoc
-huan_WS.png> <./DeconvNetB.png> <./DeconvNetP.png> <./DeconvNet_WS.png> <./FCNB
-.png> <./FCNP.png> <./FCN_WS.png> <./EnsembleB.png> <./EnsembleP.png> <./Ensemb
-le_WS.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 729.
+Underfull \hbox (badness 1648) in paragraph at lines 17--25
+[]\OT1/ptm/m/n/10 Yinyin Yuan, Hen-rik Fail-mez-ger, Os-car M Rueda,
+ []
+
+
+Underfull \hbox (badness 1205) in paragraph at lines 17--25
+\OT1/ptm/m/n/10 Schwarz, Chris-tina Cur-tis, Mark J Dun-ning, He-len
+ []
+
+[4])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 642.
+ [5
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 642.
  (./Paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 729.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 729.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 642.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 642.
 Package rerunfilecheck Info: File `Paper.out' has not changed.
-(rerunfilecheck)             Checksum: 387274BD95A09C3CAA2745EAEF82FB68;402.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 729.
+(rerunfilecheck)             Checksum: 7873865E88CF1119250D344E7C76F700;396.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 642.
  ) 
 Here is how much of TeX's memory you used:
- 7381 strings out of 493014
- 105334 string characters out of 6133351
- 213834 words of memory out of 5000000
- 10764 multiletter control sequences out of 15000+600000
- 23503 words of font info for 58 fonts, out of 8000000 for 9000
+ 7348 strings out of 493014
+ 104848 string characters out of 6133351
+ 208896 words of memory out of 5000000
+ 10742 multiletter control sequences out of 15000+600000
+ 22425 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,10n,30p,452b,491s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,10n,30p,238b,489s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local
@@ -895,10 +879,10 @@ xmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2016/texmf-dist
 e1/urw/times/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/ti
 mes/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8
 a.pfb>
-Output written on Paper.pdf (5 pages, 1393548 bytes).
+Output written on Paper.pdf (5 pages, 919245 bytes).
 PDF statistics:
- 221 PDF objects out of 1000 (max. 8388607)
- 160 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 500000)
- 165 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 203 PDF objects out of 1000 (max. 8388607)
+ 150 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
+ 140 words of extra memory for PDF output out of 10000 (max. 10000000)
 

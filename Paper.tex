@@ -7,8 +7,8 @@
 \usepackage{amsfonts}
 \usepackage[utf8]{inputenc}
 \usepackage[francais]{babel}
-\usepackage{hyperref}
-
+%\usepackage{hyperref}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
 % Example definitions.
 % --------------------
 \def\x{{\mathbf x}}
@@ -178,9 +178,10 @@ and intuitive criterion for the object splits.
 \section{Related work}
 \label{sec:related}
 
-Many traditional techniques have been proposed for the segmentation of
+\noindent Many traditional techniques have been proposed for the segmentation of
 nuclei in histopathology images, ranging from simple background
-subtraction and color threshold techniques\cite{Yuan2012} to much more
+subtraction and color threshold techniques \cite{Yuan2012} 
+to much more
 sophisticated approaches, such as marked point
 processes\cite{Kulikova2012}. Many of these methods have been recently
 reviewed \cite{irshad2014methods}.    
@@ -206,9 +207,11 @@ reviewed \cite{irshad2014methods}.
 
 Alternative methods 
 have arisen from the achieving Convolutional neural networks 
-\cite{lecun}, in particular strong incentive rose with the very impressive 
-results that they achieved in the pascal voc challenge with 
-\cite{ImageNet}. Recent advances in deep neural networks, and in 
+%\cite{lecun}, 
+%in particular strong incentive rose with the very impressive 
+%results that they achieved in the pascal voc challenge with 
+%\cite{ImageNet}. 
+Recent advances in deep neural networks, and in 
 particular in their optimization have made them become the state-of-the-
 art model for object recognition.  Deep neural network have also been 
 used for 
@@ -240,19 +243,19 @@ variability typically encountered in real histopathology data.
 \end{minipage}
 %
 %
-\begin{minipage}[b]{.48\linewidth}
-  \centering
-  \centerline{\includegraphics[width=4.0cm]{RGB_2}}
+%\begin{minipage}[b]{.48\linewidth}
+ % \centering
+%  \centerline{\includegraphics[width=4.0cm]{RGB_2}}
 %  \vspace{1.5cm}
-  \centerline{Sample from patient 581910}\medskip
-\end{minipage}
-\hfill
-\begin{minipage}[b]{0.48\linewidth}
-  \centering
-  \centerline{\includegraphics[width=4.0cm]{GT_2}}
+%  \centerline{Sample from patient 581910}\medskip
+%\end{minipage}
+%\hfill
+%\begin{minipage}[b]{0.48\linewidth}
+%  \centering
+%  \centerline{\includegraphics[width=4.0cm]{GT_2}}
 %  \vspace{1.5cm}
-  \centerline{Associated ground truth}\medskip
-\end{minipage}
+%  \centerline{Associated ground truth}\medskip
+%\end{minipage}
 %
 %
 \begin{minipage}[b]{.48\linewidth}
@@ -281,7 +284,7 @@ variability typically encountered in real histopathology data.
 %% Contribution as a dataset, small introduction
 \noindent One of the contributions of this paper is the now publicly available 
 nuclei detection dataset within HE stained histopathology images which 
-can be found at \url{http://cbio.mines-paristech.fr/~pnaylor/Downloads/HECellSegmentation.zip} 
+can be found at \url{http://cbio.mines-paristech.fr/~pnaylor/BNS.zip} 
 (not a true address). This annotated dataset provides images clustered by 
 patients. Each patient has at least 3 annotated $512 \times 512$ HE 
 histopathology images with their associated ground truth. Each 
@@ -432,14 +435,14 @@ selectively building the Watershed line or fusing the regions.
 \begin{figure}[htb]
 \begin{minipage}[b]{.48\linewidth}
   \centering
-  \centerline{\includegraphics[height=4.0cm]{RGB_pred}}
+  \centerline{\includegraphics[height=3.0cm]{RGB_pred}}
 %  \vspace{1.5cm}
   \centerline{Original RGB sample}\medskip
 \end{minipage}
 \hfill
 \begin{minipage}[b]{0.48\linewidth}
   \centering
-  \centerline{\includegraphics[width=4.0cm]{GT_pred}}
+  \centerline{\includegraphics[width=3.0cm]{GT_pred}}
 %  \vspace{1.5cm}
   \centerline{Associated ground truth}\medskip
 \end{minipage}
@@ -509,6 +512,28 @@ selectively building the Watershed line or fusing the regions.
 %  \vspace{1.5cm}
   \centerline{Watershed}\medskip
 \end{minipage}
+
+%\begin{minipage}[b]{0.32\linewidth}
+%  \centering
+%  \centerline{\includegraphics[height=2.4cm]{EnsembleB}}
+%%  \vspace{1.5cm}
+%  \centerline{Ensemble}\medskip
+%\end{minipage}
+%\hfill
+%\begin{minipage}[b]{.32\linewidth}
+%  \centering
+%  \centerline{\includegraphics[height=2.4cm]{EnsembleP}}
+%%  \vspace{1.5cm}
+%  \centerline{Probability map}\medskip
+%\end{minipage}
+%\hfill
+%\begin{minipage}[b]{.32\linewidth}
+%  \centering
+%  \centerline{\includegraphics[height=2.4cm]{Ensemble_WS}}
+%%  \vspace{1.5cm}
+%  \centerline{Watershed}\medskip
+%\end{minipage}
+
 %
 \caption{Prediction via different classifiers of a random sample on the left out patient: 581910}
 \label{fig:prediction}
@@ -523,7 +548,7 @@ selectively building the Watershed line or fusing the regions.
 
 
 
-\section{Different architectures/Results}
+\section{Different architectures}
 \label{sec:results}
 \noindent We experience with 3 known arhitectures in semantic segmentation, named PangNet, Fully Convolutionnal Net (FCN) and DeconvNet. The most basic architecture, PangNet, consists of 4 
 convolutionnal layer where each convolutionnal layer has 8 feature map, for more information please refer to \cite{pang2010cell}. 
@@ -541,11 +566,9 @@ however, in this network their are no skip layers as one intends to learn
 the proper upsampling through repeated deconvolution and convolution 
 layers. This model can also be fine tuned\cite{noh2015learning}. We also did an
 ensemble classifier of these two previous nets as suggested in 
-\cite{noh2015learning}.
-% The final architecture that we tried is the UNet. This network combines 
-%both contribution of the above networks, the UNet has a similar 
-%architecture to the DeconvNet with skip layers.
-\section{Result and discussion}
+\cite{noh2015learning} but did not include any illustration as the results of the FCN were better.
+
+\section{Results and discussion}
 \label{sec:result}
 \noindent We conducted our experiments on GPUs via the caffe framework, 
 \cite{jia2014caffe}. We present our results in table \ref{tab:res} where 
@@ -579,10 +602,10 @@ IU   &    0.759 &     0.856 & 0.857 & 0.861 \\
 Recall     &       0.744  &     0.856 & 0.855 & 0.876\\
 Precision   &       0.741 &     0.858 & 0.878 & 0.851\\
 F1    &       0.742 &     0.856 & 0.866  & 0.863\\
-TP       &       0.744 &     0.856 & 0.855 & 0.876 \\
-TN      &       0.963 &     0.981 &  0.977 & 0.979\\
+% TP       &       0.744 &     0.856 & 0.855 & 0.876 \\
+% TN      &       0.963 &     0.981 &  0.977 & 0.979\\
 Performance    &       0.853 &     0.918 & 0.916 & 0.928\\
-Pixel error  &  0.063 &     0.032 & 0.042 & 0.032\\
+% Pixel error  &  0.063 &     0.032 & 0.042 & 0.032\\
 \hline
 \end{tabular}
 \caption{Results}
@@ -592,15 +615,12 @@ Pixel error  &  0.063 &     0.032 & 0.042 & 0.032\\
 \section{Conclusion}
 \label{sec:conclusion}
 
-We presented a fully automized workflow for segmenting nuclei in
+\noindent We presented a fully automized workflow for segmenting nuclei in
 histopathology images based on deep learning and mathematical
 morphology. We have also generated a manually curated segmentation
 data base, which we make publicly available. We believe that such a
 method can become very useful for the investigation of cellular
 phenotypes at a tissue level and their relation to disease. 
-
-%I don't really know if we need something like this...
-
 
 %%with Unet
 %\begin{tabular}{|c|c|c|c|c|c|}
@@ -616,241 +636,6 @@ phenotypes at a tissue level and their relation to disease.
 %Performance    &       0.84 &       0.853 &     0.918 & 0.916&\\
 %Pixel error  &       0.11 &       0.063 &     0.032 & 0.042&\\
 %\end{tabular}
-
-
-%\section{Formatting your paper}
-%\label{sec:format}
-%
-%All printed material, including text, illustrations, and charts, must be kept
-%within a print area of 7 inches (178 mm) wide by 9 inches (229 mm) high. Do
-%not write or print anything outside the print area. The top margin must be 1
-%inch (25 mm), except for the title page, and the left margin must be 0.75 inch
-%(19 mm).  All {\it text} must be in a two-column format. Columns are to be 3.39
-%inches (86 mm) wide, with a 0.24 inch (6 mm) space between them. Text must be
-%fully justified.
-%
-%\section{PAGE TITLE SECTION}
-%\label{sec:pagestyle}
-%
-%The paper title (on the first page) should begin 1.38 inches (35 mm) from the
-%top edge of the page, centered, completely capitalized, and in Times 14-point,
-%boldface type.  The authors' name(s) and affiliation(s) appear below the title
-%in capital and lower case letters.  Papers with multiple authors and
-%affiliations may require two or more lines for this information.
-%
-%\section{TYPE-STYLE AND FONTS}
-%\label{sec:typestyle}
-%
-%To achieve the best rendering both in the proceedings and from the CD-ROM, we
-%strongly encourage you to use Times-Roman font.  In addition, this will give
-%the proceedings a more uniform look.  Use a font that is no smaller than nine
-%point type throughout the paper, including figure captions.
-%
-%In nine point type font, capital letters are 2 mm high.  If you use the
-%smallest point size, there should be no more than 3.2 lines/cm (8 lines/inch)
-%vertically.  This is a minimum spacing; 2.75 lines/cm (7 lines/inch) will make
-%the paper much more readable.  Larger type sizes require correspondingly larger
-%vertical spacing.  Please do not double-space your paper.  True-Type 1 fonts
-%are preferred.
-%
-%The first paragraph in each section should not be indented, but all the
-%following paragraphs within the section should be indented as these paragraphs
-%demonstrate.
-%
-%\section{MAJOR HEADINGS}
-%\label{sec:majhead}
-%
-%Major headings, for example, "1. Introduction", should appear in all capital
-%letters, bold face if possible, centered in the column, with one blank line
-%before, and one blank line after. Use a period (".") after the heading number,
-%not a colon.
-%
-%\subsection{Subheadings}
-%\label{ssec:subhead}
-%
-%Subheadings should appear in lower case (initial word capitalized) in
-%boldface.  They should start at the left margin on a separate line.
-% 
-%\subsubsection{Sub-subheadings}
-%\label{sssec:subsubhead}
-%
-%Sub-subheadings, as in this paragraph, are discouraged. However, if you
-%must use them, they should appear in lower case (initial word
-%capitalized) and start at the left margin on a separate line, with paragraph
-%text beginning on the following line.  They should be in italics.
-%
-%\section{PRINTING YOUR PAPER}
-%\label{sec:print}
-%
-%Print your properly formatted text on high-quality, 8.5 x 11-inch white printer
-%paper. A4 paper is also acceptable, but please leave the extra 0.5 inch (12 mm)
-%empty at the BOTTOM of the page and follow the top and left margins as
-%specified.  If the last page of your paper is only partially filled, arrange
-%the columns so that they are evenly balanced if possible, rather than having
-%one long column.
-%
-%In \LaTeX, to start a new column (but not a new page) and help balance the
-%last-page column lengths, you can use the command ``$\backslash$pagebreak'' as
-%demonstrated on this page (see the \LaTeX\ source below).
-%
-%\section{PAGE NUMBERING}
-%\label{sec:page}
-%
-%Please do {\bf not} paginate your paper.  Page numbers, session numbers, and
-%conference identification will be inserted when the paper is included in the
-%proceedings.
-%
-%\section{ILLUSTRATIONS, GRAPHS, AND PHOTOGRAPHS}
-%\label{sec:illust}
-%
-%Illustrations must appear within the designated margins.  They may span the two
-%columns.  If possible, position illustrations at the top of columns, rather
-%than in the middle or at the bottom.  Caption and number every illustration.
-%All halftone illustrations must be clear black and white prints.  If you use
-%color, make sure that the color figures are clear when printed on a black-only
-%printer.
-%
-%Since there are many ways, often incompatible, of including images (e.g., with
-%experimental results) in a \LaTeX\ document, below is an example of how to do
-%this \cite{Lamp86}.
-
-% Below is an example of how to insert images. Delete the ``\vspace'' line,
-% uncomment the preceding line ``\centerline...'' and replace ``imageX.ps''
-% with a suitable PostScript file name.
-% -------------------------------------------------------------------------
-
-
-
-
-%\begin{minipage}[b]{0.32\linewidth}
-%  \centering
-%  \centerline{\includegraphics[height=2.4cm]{BaochuanB}}
-%%  \vspace{1.5cm}
-%  \centerline{PangNet}\medskip
-%\end{minipage}
-%\hfill
-%\begin{minipage}[b]{.32\linewidth}
-%  \centering
-%  \centerline{\includegraphics[height=2.5cm]{BaochuanP}}
-%%  \vspace{1.5cm}
-%  \centerline{Probability map}\medskip
-%\end{minipage}
-%\hfill
-%\begin{minipage}[b]{.32\linewidth}
-%  \centering
-%  \centerline{\includegraphics[height=2.4cm]{Baochuan_WS}}
-%%  \vspace{1.5cm}
-%  \centerline{Watershed}\medskip
-%\end{minipage}
-%
-%%
-%%
-%\begin{minipage}[b]{0.32\linewidth}
-%  \centering
-%  \centerline{\includegraphics[height=2.4cm]{DeconvNetB}}
-%%  \vspace{1.5cm}
-%  \centerline{DeconvNet}\medskip
-%\end{minipage}
-%\hfill
-%\begin{minipage}[b]{.32\linewidth}
-%  \centering
-%  \centerline{\includegraphics[height=2.4cm]{DeconvNetP}}
-%%  \vspace{1.5cm}
-%  \centerline{Probability map}\medskip
-%\end{minipage}
-%\hfill
-%\begin{minipage}[b]{.32\linewidth}
-%  \centering
-%  \centerline{\includegraphics[height=2.4cm]{DeconvNet_WS}}
-%%  \vspace{1.5cm}
-%  \centerline{Watershed}\medskip
-%\end{minipage}
-%%
-%\begin{minipage}[b]{0.32\linewidth}
-%  \centering
-%  \centerline{\includegraphics[height=2.4cm]{FCNB}}
-%%  \vspace{1.5cm}
-%  \centerline{FCN}\medskip
-%\end{minipage}
-%\hfill
-%\begin{minipage}[b]{.32\linewidth}
-%  \centering
-%  \centerline{\includegraphics[height=2.4cm]{FCNP}}
-%%  \vspace{1.5cm}
-%  \centerline{Probability map}\medskip
-%\end{minipage}
-%\hfill
-%\begin{minipage}[b]{.32\linewidth}
-%  \centering
-%  \centerline{\includegraphics[height=2.4cm]{FCN_WS}}
-%%  \vspace{1.5cm}
-%  \centerline{Watershed}\medskip
-%\end{minipage}
-%%
-%\begin{minipage}[b]{0.32\linewidth}
-%  \centering
-%  \centerline{\includegraphics[height=2.4cm]{EnsembleB}}
-%%  \vspace{1.5cm}
-%  \centerline{Ensemble}\medskip
-%\end{minipage}
-%\hfill
-%\begin{minipage}[b]{.32\linewidth}
-%  \centering
-%  \centerline{\includegraphics[height=2.4cm]{EnsembleP}}
-%%  \vspace{1.5cm}
-%  \centerline{Probability map}\medskip
-%\end{minipage}
-%\hfill
-%\begin{minipage}[b]{.32\linewidth}
-%  \centering
-%  \centerline{\includegraphics[height=2.4cm]{Ensemble_WS}}
-%%  \vspace{1.5cm}
-%  \centerline{Watershed}\medskip
-%\end{minipage}
-%\caption{Prediction via different classifiers of a random sample on the left out patient: 581910}
-%\label{fig:prediction}
-%%
-%\end{figure}
-
-% To start a new column (but not a new page) and help balance the last-page
-% column length use \vfill\pagebreak.
-% -------------------------------------------------------------------------
-%\vfill
-%\pagebreak
-
-
-%\section{FOOTNOTES}
-%\label{sec:foot}
-%
-%Use footnotes sparingly (or not at all!) and place them at the bottom of the
-%column on the page on which they are referenced. Use Times 9-point type,
-%single-spaced. To help your readers, avoid using footnotes altogether and
-%include necessary peripheral observations in the text (within parentheses, if
-%you prefer, as in this sentence).
-%
-
-%\section{COPYRIGHT FORMS}
-%\label{sec:copyright}
-%
-%You must include your fully completed, signed IEEE copyright release form when
-%you submit your paper. We {\bf must} have this form before your paper can be
-%published in the proceedings.  The copyright form is available as a Word file,
-%a PDF file, and an HTML file. You can also use the form sent with your author
-%kit.
-
-%\section{REFERENCES}
-%\label{sec:ref}
-
-%List and number all bibliographical references at the end of the
-%paper.  The references can be numbered in alphabetic order or in
-%order of appearance in the document.  When referring to them in the
-%text, type the corresponding reference number in square brackets as
-%shown at the end of this sentence \cite{C2}. 
-
-% References should be produced using the bibtex program from suitable
-% BiBTeX files (here: strings, refs, manuals). The IEEEbib.bst bibliography
-% style file from IEEE produces unsorted bibliography list.
-% -------------------------------------------------------------------------
 \bibliographystyle{IEEEbib}
 \bibliography{refs}
 
