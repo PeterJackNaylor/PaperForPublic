@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.6.16)  8 NOV 2016 01:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.6.16)  8 NOV 2016 01:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -701,25 +701,25 @@ Underfull \hbox (badness 1783) in paragraph at lines 208--222
 
 
 ]
-<RGB_1.png, id=62, 196.48407pt x 196.48407pt>
+<RGB_1.png, id=60, 196.48407pt x 196.48407pt>
 File: RGB_1.png Graphic file (type png)
  <use RGB_1.png>
 Package pdftex.def Info: RGB_1.png used on input line 233.
 (pdftex.def)             Requested size: 113.81102pt x 113.81392pt.
 
-<GT_1.png, id=63, 199.49532pt x 197.98969pt>
+<GT_1.png, id=61, 199.49532pt x 197.98969pt>
 File: GT_1.png Graphic file (type png)
  <use GT_1.png>
 Package pdftex.def Info: GT_1.png used on input line 240.
 (pdftex.def)             Requested size: 113.81102pt x 112.95197pt.
 
-<RGB_3.png, id=64, 196.48407pt x 196.48407pt>
+<RGB_3.png, id=62, 196.48407pt x 196.48407pt>
 File: RGB_3.png Graphic file (type png)
  <use RGB_3.png>
 Package pdftex.def Info: RGB_3.png used on input line 263.
 (pdftex.def)             Requested size: 113.81102pt x 113.81392pt.
 
-<GT_3.png, id=65, 198.7425pt x 197.98969pt>
+<GT_3.png, id=63, 198.7425pt x 197.98969pt>
 File: GT_3.png Graphic file (type png)
  <use GT_3.png>
 Package pdftex.def Info: GT_3.png used on input line 270.
@@ -736,67 +736,67 @@ n/10 (not a
  []
 
 [2 <./RGB_1.png (PNG copy)> <./GT_1.png (PNG copy)> <./RGB_3.png (PNG copy)> <.
-/GT_3.png (PNG copy)>] <RGB_pred.png, id=89, 265.99374pt x 265.99374pt>
+/GT_3.png (PNG copy)>] <RGB_pred.png, id=87, 265.99374pt x 265.99374pt>
 File: RGB_pred.png Graphic file (type png)
 
 <use RGB_pred.png>
 Package pdftex.def Info: RGB_pred.png used on input line 438.
 (pdftex.def)             Requested size: 85.35513pt x 85.35826pt.
- <GT_pred.png, id=91, 496.85625pt x 496.85625pt>
+ <GT_pred.png, id=89, 496.85625pt x 496.85625pt>
 File: GT_pred.png Graphic file (type png)
 
 <use GT_pred.png>
 Package pdftex.def Info: GT_pred.png used on input line 445.
 (pdftex.def)             Requested size: 85.35826pt x 85.35146pt.
- <BaochuanB.png, id=92, 263.98625pt x 266.9975pt>
+ <BaochuanB.png, id=90, 263.98625pt x 266.9975pt>
 File: BaochuanB.png Graphic file (type png)
 
 <use BaochuanB.png>
 Package pdftex.def Info: BaochuanB.png used on input line 453.
 (pdftex.def)             Requested size: 67.51498pt x 68.28644pt.
- <BaochuanP.png, id=93, 271.0125pt x 236.885pt>
+ <BaochuanP.png, id=91, 271.0125pt x 236.885pt>
 File: BaochuanP.png Graphic file (type png)
 
 <use BaochuanP.png>
 Package pdftex.def Info: BaochuanP.png used on input line 460.
 (pdftex.def)             Requested size: 81.3788pt x 71.13188pt.
- <Baochuan_WS.png, id=94, 226.8475pt x 225.84375pt>
+ <Baochuan_WS.png, id=92, 226.8475pt x 225.84375pt>
 File: Baochuan_WS.png Graphic file (type png)
 
 <use Baochuan_WS.png>
 Package pdftex.def Info: Baochuan_WS.png used on input line 467.
 (pdftex.def)             Requested size: 68.59128pt x 68.28644pt.
- <DeconvNetB.png, id=95, 262.9825pt x 265.99374pt>
+ <DeconvNetB.png, id=93, 262.9825pt x 265.99374pt>
 File: DeconvNetB.png Graphic file (type png)
 
 <use DeconvNetB.png>
 Package pdftex.def Info: DeconvNetB.png used on input line 476.
 (pdftex.def)             Requested size: 67.51108pt x 68.28644pt.
- <DeconvNetP.png, id=96, 275.0275pt x 234.8775pt>
+ <DeconvNetP.png, id=94, 275.0275pt x 234.8775pt>
 File: DeconvNetP.png Graphic file (type png)
 
 <use DeconvNetP.png>
 Package pdftex.def Info: DeconvNetP.png used on input line 483.
 (pdftex.def)             Requested size: 79.95737pt x 68.28644pt.
- <DeconvNet_WS.png, id=97, 224.84pt x 225.84375pt>
+ <DeconvNet_WS.png, id=95, 224.84pt x 225.84375pt>
 File: DeconvNet_WS.png Graphic file (type png)
 
 <use DeconvNet_WS.png>
 Package pdftex.def Info: DeconvNet_WS.png used on input line 490.
 (pdftex.def)             Requested size: 67.98428pt x 68.28644pt.
- <FCNB.png, id=98, 263.98625pt x 265.99374pt>
+ <FCNB.png, id=96, 263.98625pt x 265.99374pt>
 File: FCNB.png Graphic file (type png)
 
 <use FCNB.png>
 Package pdftex.def Info: FCNB.png used on input line 497.
 (pdftex.def)             Requested size: 67.76875pt x 68.28644pt.
- <FCNP.png, id=99, 271.0125pt x 235.88126pt>
+ <FCNP.png, id=97, 271.0125pt x 235.88126pt>
 File: FCNP.png Graphic file (type png)
  <use FCNP.png>
 Package pdftex.def Info: FCNP.png used on input line 504.
 (pdftex.def)             Requested size: 78.45514pt x 68.28644pt.
 
-<FCN_WS.png, id=100, 223.83624pt x 225.84375pt>
+<FCN_WS.png, id=98, 223.83624pt x 225.84375pt>
 File: FCN_WS.png Graphic file (type png)
  <use FCN_WS.png>
 Package pdftex.def Info: FCN_WS.png used on input line 511.
@@ -829,21 +829,9 @@ Underfull \hbox (badness 4752) in paragraph at lines 11--15
 p.
  []
 
-
-Underfull \hbox (badness 1648) in paragraph at lines 17--25
-[]\OT1/ptm/m/n/10 Yinyin Yuan, Hen-rik Fail-mez-ger, Os-car M Rueda,
- []
-
-
-Underfull \hbox (badness 1205) in paragraph at lines 17--25
-\OT1/ptm/m/n/10 Schwarz, Chris-tina Cur-tis, Mark J Dun-ning, He-len
- []
-
-[4])
+)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 642.
- [5
-
-]
+ [4]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 642.
  (./Paper.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 642.
@@ -853,13 +841,13 @@ Package rerunfilecheck Info: File `Paper.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 642.
  ) 
 Here is how much of TeX's memory you used:
- 7348 strings out of 493014
- 104848 string characters out of 6133351
- 208896 words of memory out of 5000000
- 10742 multiletter control sequences out of 15000+600000
+ 7345 strings out of 493014
+ 104819 string characters out of 6133351
+ 208865 words of memory out of 5000000
+ 10741 multiletter control sequences out of 15000+600000
  22425 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,10n,30p,238b,489s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,10n,30p,238b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local
@@ -879,10 +867,10 @@ xmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2016/texmf-dist
 e1/urw/times/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/ti
 mes/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8
 a.pfb>
-Output written on Paper.pdf (5 pages, 919245 bytes).
+Output written on Paper.pdf (4 pages, 924186 bytes).
 PDF statistics:
- 203 PDF objects out of 1000 (max. 8388607)
- 150 compressed objects within 2 object streams
- 29 named destinations out of 1000 (max. 500000)
+ 197 PDF objects out of 1000 (max. 8388607)
+ 145 compressed objects within 2 object streams
+ 27 named destinations out of 1000 (max. 500000)
  140 words of extra memory for PDF output out of 10000 (max. 10000000)
 

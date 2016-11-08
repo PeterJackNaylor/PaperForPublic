@@ -13,16 +13,6 @@ Olaf Ronneberger, Philipp Fischer, and Thomas Brox,
 \newblock in {\em Medical Image Computing and Computer-Assisted
   Intervention--MICCAI 2015}, pp. 234--241. Springer, 2015.
 
-\bibitem{Yuan2012}
-Yinyin Yuan, Henrik Failmezger, Oscar~M Rueda, H~Raza Ali, Stefan Gr{\"{a}}f,
-  Suet-Feung Chin, Roland~F Schwarz, Christina Curtis, Mark~J Dunning, Helen
-  Bardwell, Nicola Johnson, Sarah Doyle, Gulisa Turashvili, Elena Provenzano,
-  Sam Aparicio, Carlos Caldas, and Florian Markowetz,
-\newblock ``{Quantitative image analysis of cellular heterogeneity in breast
-  tumors complements genomic profiling.},''
-\newblock {\em Science translational medicine}, vol. 4, no. 157, pp. 157ra143,
-  oct 2012.
-
 \bibitem{Kulikova2012}
 Maria Kulikova, Antoine Veillard, Ludovic Roux, and Daniel Racoceanu,
 \newblock ``{Nuclei Extraction from Histopathological Images using a Marked
