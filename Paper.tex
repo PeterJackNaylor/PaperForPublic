@@ -262,7 +262,7 @@ variability typically encountered in real histopathology data.
   \centering
   \centerline{\includegraphics[width=4.0cm]{RGB_3}}
 %  \vspace{1.5cm}
-  \centerline{Another one from patient 581910}\medskip
+  \centerline{Sample from patient 581910}\medskip
 \end{minipage}
 \hfill
 \begin{minipage}[b]{0.48\linewidth}
@@ -284,8 +284,7 @@ variability typically encountered in real histopathology data.
 %% Contribution as a dataset, small introduction
 \noindent One of the contributions of this paper is the now publicly available 
 nuclei detection dataset within HE stained histopathology images which 
-can be found at \url{http://cbio.mines-paristech.fr/~pnaylor/BNS.zip} 
-(not a true address). This annotated dataset provides images clustered by 
+can be found at \url{http://cbio.mines-paristech.fr/~pnaylor/BNS.zip}. This annotated dataset provides images clustered by 
 patients. Each patient has at least 3 annotated $512 \times 512$ HE 
 histopathology images with their associated ground truth. Each 
 ground truth image is a $512 \times 512$ label image where each pixel value above 
@@ -364,7 +363,7 @@ For this reason we use a leave-one-patient-out strategy: for a
 given set of hyper parameters, we 
 train our model on every patient except one that is used for validation. 
 Our final score is averaged over all patients.
-Several metrics give a detailed assessment of the model quality: accuracy, 
+Several metrics give a detailed assessment of the model quality: accuracy, intersection over union (IU),
 F1 score and a performance score which is the mean between 
 true positive rate and true negative rate.
 
@@ -590,8 +589,7 @@ prediction, many unrelated minimas will lead to highly partitionned cell.
 This phenomenom also appears with the DeconvNet where undesired 
 cuts were performed, like for the cell at the bottom left of the image. 
 We picked $\lambda = 7$ which seemed to give a nice partitionning of 
-the image, this value can be found by cross validation or by simple 
-visualization of the results.
+the image, this value can be found by cross validation.
 \begin{table}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
