@@ -183,7 +183,7 @@ nuclei in histopathology images, ranging from simple background
 subtraction and color threshold techniques 
 to much more
 sophisticated approaches, such as marked point
-processes\cite{Kulikova2012}. Many of these methods have been recently
+processes. Many of these methods have been recently
 reviewed \cite{irshad2014methods}.    
 
 %Image segmentation and object recognition in medical imaging have 
@@ -205,34 +205,38 @@ reviewed \cite{irshad2014methods}.
 %a whole, via a classification scheme. The output confidence vector is 
 %then preprocessed to obtain the final segmentation. 
 
-Alternative methods 
-have arisen from the achieving Convolutional neural networks.
+%Alternative methods 
+%have arisen from the achieving Convolutional neural networks.
 %\cite{lecun}, 
 %in particular strong incentive rose with the very impressive 
 %results that they achieved in the pascal voc challenge with 
 %\cite{ImageNet}. 
-Recent advances in deep neural networks, and in 
+More recently, advances in deep convolutional neural networks (CNN), and in 
 particular in their optimization have made them become the state-of-the-
-art model for object recognition.  Deep neural network have also been 
-used for 
-semantic segmentation, where \cite{long2015fcn} use "de-
-convolution layers" and up-sampling in order to identify and precisely 
-locate objects within a picture. Different architecture arising from 
-different intuition are also possible and have been applied in this paper.
+art model for object recognition. 
+Indeed, deep neural networks have been used for the localization and classification of nuclei in histopathology data from breast and colon cancer \cite{xu2016stacked,sirinukunwattana2016locality}, but these previously published approaches do no allow for segmentation. 
+
+On the other hand, deep CNN have also been used for semantic segmentation in other fields, where \cite{long2015fcn} use "de-convolution layers" and up-sampling in order to directly output binary images. The rationale of our proposed method was therefore to learn segmentation directly from annotated samples with this or similar architectures. 
+
+%identify and precisely 
+%locate objects within a picture. Different architectures arising from 
+%different intuition are also possible and have been applied in this paper.
 
 Learning based methods rely on annotated data sets. But for the
 problem of nuclei segmentation in histopathology images, there are
 only few manually segmented images freely available. 
 In \cite{Drelie08-298}, a partially annotated data set has been
 released. However, this data set does not cover the morphological
-variability typically encountered in real histopathology data. Moreover, nuclei spot detection in histopathology has been tackled in breast and colon cancer in \cite{xu2016stacked} and \cite{sirinukunwattana2016locality}. Our setup is different in terms of architecture as we use a very deep architecture for segmentation and not image patches for nuclei centroid detection.
+variability typically encountered in real histopathology data. 
+
 
 \begin{figure}[htb]
 \begin{minipage}[b]{.48\linewidth}
   \centering
   \centerline{\includegraphics[width=4.0cm]{RGB_1}}
 %  \vspace{1.5cm}
-  \centerline{Sample from patient 498959}\medskip
+%  \centerline{Sample from patient 498959}\medskip
+  \centerline{Sample from patient 1}\medskip
 \end{minipage}
 \hfill
 \begin{minipage}[b]{0.48\linewidth}
@@ -262,7 +266,8 @@ variability typically encountered in real histopathology data. Moreover, nuclei 
   \centering
   \centerline{\includegraphics[width=4.0cm]{RGB_3}}
 %  \vspace{1.5cm}
-  \centerline{Sample from patient 581910}\medskip
+ % \centerline{Sample from patient 581910}\medskip
+  \centerline{Sample from patient 2}\medskip
 \end{minipage}
 \hfill
 \begin{minipage}[b]{0.48\linewidth}
@@ -354,12 +359,11 @@ We minimize the loss function via stochastic gradient descent.
 
 %% Validation scheme
 We have our training set $(A_l,B_l)_{l \in [1, N]}$ where N is equal to 
-33, however each element $A_l$ belongs to a certain patients and 
+33, however each element $A_l$ belongs to a certain patient and 
 several elements $A_l$ can belong to the same patient. As we are 
 dealing with histopathology images, it is known that samples can widely 
 vary from one patient to the other. We thus validate our model by a 
-leave one patient out scheme. 
-For this reason we use a leave-one-patient-out strategy: for a 
+leave-one-patient-out scheme: for a 
 given set of hyper parameters, we 
 train our model on every patient except one that is used for validation. 
 Our final score is averaged over all patients.
@@ -534,7 +538,7 @@ selectively building the Watershed line or fusing the regions.
 %\end{minipage}
 
 %
-\caption{Prediction via different classifiers of a random sample on the left out patient: 581910}
+\caption{Prediction via different classifiers of a random sample on the (same) left out patient}
 \label{fig:prediction}
 %
 \end{figure}
@@ -546,7 +550,7 @@ selectively building the Watershed line or fusing the regions.
 %all the steps which were not related to deep learning. 
 
 
-\vspace{-1cm}
+%\vspace{-.2cm}
 \section{Different architectures}
 \label{sec:results}
 \noindent We experience with 3 known arhitectures in semantic segmentation, named PangNet, Fully Convolutionnal Net (FCN) and DeconvNet. The most basic architecture, PangNet, consists of 4 
@@ -585,15 +589,14 @@ homogeneous and dark inside, the method fails ( "holes" in the
 cells). On the 
 contrary, deeper nets as FCN and DeconvNet have learnt deeper features 
 and seem capable of recognizing whole cells. On these probability maps 
-we applied our watershed segmentation and we can picture the results in 
+we applied our postprocessing scheme and we can picture the results in 
 the third 
-column. By construction, our post-processing 
-scheme is very sensitive to noise as we can see in the PangNet 
-prediction, many unrelated minimas will lead to highly partitionned cell. 
+column. By construction, the postprocessing relies on a smooth posterior probability as we can see in the PangNet 
+prediction: many unrelated minimas will lead to oversegmentation. 
 This phenomenom also appears with the DeconvNet where undesired 
 cuts were performed, like for the cell at the bottom left of the image. 
 We picked $\lambda = 7$ which seemed to give a nice partitionning of 
-the image, this value can be found by cross validation.
+the image, this value can also be found by cross validation.
 \begin{table}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
