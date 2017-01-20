@@ -225,7 +225,7 @@ problem of nuclei segmentation in histopathology images, there are
 only few manually segmented images freely available. 
 In \cite{Drelie08-298}, a partially annotated data set has been
 released. However, this data set does not cover the morphological
-variability typically encountered in real histopathology data. 
+variability typically encountered in real histopathology data. Moreover, nuclei spot detection in histopathology has been tackled in breast and colon cancer in \cite{xu2016stacked} and \cite{sirinukunwattana2016locality}. Our setup is different in terms of architecture as we use a very deep architecture for segmentation and not image patches for nuclei centroid detection.
 
 \begin{figure}[htb]
 \begin{minipage}[b]{.48\linewidth}
@@ -546,7 +546,7 @@ selectively building the Watershed line or fusing the regions.
 %all the steps which were not related to deep learning. 
 
 
-
+\vspace{-1cm}
 \section{Different architectures}
 \label{sec:results}
 \noindent We experience with 3 known arhitectures in semantic segmentation, named PangNet, Fully Convolutionnal Net (FCN) and DeconvNet. The most basic architecture, PangNet, consists of 4 
@@ -565,8 +565,12 @@ however, in this network their are no skip layers as one intends to learn
 the proper upsampling through repeated deconvolution and convolution 
 layers. This model can also be fine tuned\cite{noh2015learning}. We also did an
 ensemble classifier of these two previous nets as suggested in 
-\cite{noh2015learning} but did not include any illustration as the results of the FCN were better.
-
+\cite{noh2015learning} but did not include any illustration. Processing 
+one image of size $224 \times 224$ pixels took on average 0.91 secondes for 
+PangNet, which is the smallest network, and it took on average 3.38 secondes for DeconvNet, the 
+largest network. These times do not depend on the number of cells. These computation 
+times were estimated on a K620 Quadro graphics card.
+\vspace{-0.3cm}
 \section{Results and discussion}
 \label{sec:result}
 \noindent We conducted our experiments on GPUs via the caffe framework, 
